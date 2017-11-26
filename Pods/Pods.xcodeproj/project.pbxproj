@@ -1,0 +1,976 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		039D41FAE2DD868260758D89001EC69A /* HMACCommonCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EB9D159381A7C46CC0CFD55D352EA4 /* HMACCommonCrypto.swift */; };
+		17393D3448BFB10186ADFB6C9CBCCC48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		1901AC29905600662E289A7B07BB3F23 /* Pods-acara.in-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 745287A62A7E70E1359AC7DE8A868DEE /* Pods-acara.in-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C8DE41099A890D58CA488076828B350 /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFCE9381FD8F0ADAC62FD3CDDE92492 /* JWT.swift */; };
+		3178C2C897F5E745224E4CCB3D26B5E9 /* Pods-acara.in-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4451F465B8C89912FB6AF2B7DE76A5 /* Pods-acara.in-dummy.m */; };
+		3BFCB70093CDC6323C4CDC56A8309182 /* Claims.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73211ADF26955E9C35C1EE3868E238 /* Claims.swift */; };
+		43CB9FBF4F563866570B3AADCC6E6949 /* ClaimSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB6866A864A1B73FCA845C1B3584FF /* ClaimSet.swift */; };
+		4A640ADE7B66D3B7F5C6AE09ED056C4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		4A6F396E17A570BDFD6CA5FBC57B41F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		5225B5598072D741D8303EB9D122925E /* JSONWebToken-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 16266C6C28A6FB3CB3CBB504DA5292B1 /* JSONWebToken-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D5490C4D59F4170AB2EE20A9DC87820 /* JOSEHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4014830B9E0BEF3577ED39C89052F981 /* JOSEHeader.swift */; };
+		5F7B8955B7CFB46DCF40C334C1FA868D /* Encode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C84A30B567ADC07C6545847CC35ED1D /* Encode.swift */; };
+		7578EB7E4048855F3893508E6E2555B0 /* Pods-acara.inUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E41C85FF89714280B5C91C208EF0126 /* Pods-acara.inUITests-dummy.m */; };
+		9673E6DC1978A3570F513DFB20F5D33A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		9D738A06230ED68D87E31FD99FB674CA /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21952F78C52DFB32DDC92944E2406DE4 /* Base64.swift */; };
+		B37E22D2C326CEDE8C0B899C0BDD573D /* JSONWebToken-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 773A30D58ADCE6997E8E16CBB1FA6810 /* JSONWebToken-dummy.m */; };
+		B5F5B5C06333376202D27E88D7D5BF09 /* Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A33E23E4CA0BCE26C3A3C5EDD82BBE5 /* Decode.swift */; };
+		C2E1EA5AAC9022FC4FD634FBEEBB6539 /* Pods-acara.inTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C871E6E2FD9E59FDB6060989EA51A49 /* Pods-acara.inTests-dummy.m */; };
+		D86844F60046B5C66BF80E3105FE2930 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF070C3D9CA400F765AE2929911C2F73 /* HMAC.swift */; };
+		E8D9FFBF0C022796252F3B80F9B74E36 /* Pods-acara.inTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A7855716E47654BCBA444BCA07D5FBD5 /* Pods-acara.inTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F897F8613C13610FD1CE755AAEB330A9 /* Pods-acara.inUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CE14B923760F512A2B25C27F7A5788D1 /* Pods-acara.inUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B7FB472264617B4DF7A2FE5F14F4DBB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04ACCD651C30E7B6FE864F0FFE983BA5;
+			remoteInfo = JSONWebToken;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04E16375A563CF464176BC26724801BF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B84D69FD56558ADEB7A1BB5EADDAB73 /* Pods-acara.inUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-acara.inUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0BF958DDC25EDC5C1B035ADE2E9EDD1F /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
+		0C84A30B567ADC07C6545847CC35ED1D /* Encode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Encode.swift; path = Sources/Encode.swift; sourceTree = "<group>"; };
+		0FFCE9381FD8F0ADAC62FD3CDDE92492 /* JWT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWT.swift; path = Sources/JWT.swift; sourceTree = "<group>"; };
+		157F04C48DFC24387F01FE53875EDBAD /* JSONWebToken.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = JSONWebToken.modulemap; sourceTree = "<group>"; };
+		16266C6C28A6FB3CB3CBB504DA5292B1 /* JSONWebToken-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONWebToken-umbrella.h"; sourceTree = "<group>"; };
+		21952F78C52DFB32DDC92944E2406DE4 /* Base64.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Base64.swift; path = Sources/Base64.swift; sourceTree = "<group>"; };
+		29EDC45C183964D0C415153B3ACC73DE /* Pods_acara_inTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_acara_inTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C73211ADF26955E9C35C1EE3868E238 /* Claims.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Claims.swift; path = Sources/Claims.swift; sourceTree = "<group>"; };
+		2E75E9CCC263C0C61BDB3F81B7A667E4 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		3C6EC7F7A9C8DE5E31FE618378A5A082 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D7F7BA2134426CAE6AF7B06074D8A5D /* Pods-acara.inUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acara.inUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		3E41C85FF89714280B5C91C208EF0126 /* Pods-acara.inUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-acara.inUITests-dummy.m"; sourceTree = "<group>"; };
+		4014830B9E0BEF3577ED39C89052F981 /* JOSEHeader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JOSEHeader.swift; path = Sources/JOSEHeader.swift; sourceTree = "<group>"; };
+		5C871E6E2FD9E59FDB6060989EA51A49 /* Pods-acara.inTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-acara.inTests-dummy.m"; sourceTree = "<group>"; };
+		5F432BD34BA3EED1672E411C9E09ADCD /* Pods-acara.inTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-acara.inTests-resources.sh"; sourceTree = "<group>"; };
+		5FD4E780AE09C2E4AFA18D9875C152B6 /* Pods_acara_in.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_acara_in.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62B6A68C5A6B3A0171A2A783661029BD /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		63546CC64D55FF0059F99B9DF4950B8A /* JSONWebToken-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONWebToken-prefix.pch"; sourceTree = "<group>"; };
+		65EB9D159381A7C46CC0CFD55D352EA4 /* HMACCommonCrypto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMACCommonCrypto.swift; path = Sources/HMACCommonCrypto.swift; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		68BE4755C845B086EAD9A369C5410EC4 /* Pods-acara.in.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-acara.in.modulemap"; sourceTree = "<group>"; };
+		70BB6866A864A1B73FCA845C1B3584FF /* ClaimSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClaimSet.swift; path = Sources/ClaimSet.swift; sourceTree = "<group>"; };
+		745287A62A7E70E1359AC7DE8A868DEE /* Pods-acara.in-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-acara.in-umbrella.h"; sourceTree = "<group>"; };
+		76C6A17F7E214B9E7F0432BF38A3B089 /* Pods-acara.in-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-acara.in-resources.sh"; sourceTree = "<group>"; };
+		773A30D58ADCE6997E8E16CBB1FA6810 /* JSONWebToken-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JSONWebToken-dummy.m"; sourceTree = "<group>"; };
+		7A18E58387DC6A03AC70D8533448E214 /* Pods-acara.in.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-acara.in.debug.xcconfig"; sourceTree = "<group>"; };
+		82C7B762E4ED1D1F3A7831CC211D8021 /* Pods-acara.inTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acara.inTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		84820D2D0CB0C14963A03647278C18E6 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		89D37531DF92F5027457BE219DDCEE27 /* Pods-acara.inTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-acara.inTests-frameworks.sh"; sourceTree = "<group>"; };
+		8A4451F465B8C89912FB6AF2B7DE76A5 /* Pods-acara.in-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-acara.in-dummy.m"; sourceTree = "<group>"; };
+		924BBCE99D712C0D5B715367D1A8B831 /* Pods-acara.inUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acara.inUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96B9058BD5356FCE300A3CF9F53548C0 /* JSONWebToken.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JSONWebToken.xcconfig; sourceTree = "<group>"; };
+		990F248C8D173ACAFCAF515444651DE2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A33E23E4CA0BCE26C3A3C5EDD82BBE5 /* Decode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Decode.swift; path = Sources/Decode.swift; sourceTree = "<group>"; };
+		A44BAFFE496861B83E14F80BA8E4A797 /* Pods-acara.inTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-acara.inTests.release.xcconfig"; sourceTree = "<group>"; };
+		A7855716E47654BCBA444BCA07D5FBD5 /* Pods-acara.inTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-acara.inTests-umbrella.h"; sourceTree = "<group>"; };
+		A907DCD8296FD022BA8484B81FFDBB44 /* Pods_acara_inUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_acara_inUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A96CE80FA171F0333189235925BCD304 /* Pods-acara.inTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-acara.inTests.modulemap"; sourceTree = "<group>"; };
+		AE0922CDA145C6504DCF041C06E43335 /* JWT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JWT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2EB974137C9149122AF9C0EAD48919C /* Pods-acara.inUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-acara.inUITests-resources.sh"; sourceTree = "<group>"; };
+		B4357C3FFF905D21073DB24D95EE9634 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		BA9EC4097B6B3E5C74F249EB38EE40D3 /* Pods-acara.in.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-acara.in.release.xcconfig"; sourceTree = "<group>"; };
+		C56CEDFD656BD44658744778911C96AB /* Pods-acara.inTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-acara.inTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CE14B923760F512A2B25C27F7A5788D1 /* Pods-acara.inUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-acara.inUITests-umbrella.h"; sourceTree = "<group>"; };
+		D149E2C47404DC0B9DE678591B1162AD /* Pods-acara.in-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acara.in-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D527C332A22830956BF85E3B69CC7464 /* Pods-acara.inUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-acara.inUITests-frameworks.sh"; sourceTree = "<group>"; };
+		DA2827D4C0C4399A0E68074E82A69F75 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB62923AF4E3C17C89B9A765565E07FA /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
+		E7DFE6F3EBAFF6208A6D83EE83C009ED /* Pods-acara.in-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acara.in-acknowledgements.plist"; sourceTree = "<group>"; };
+		F1500C3F3029CD6F3EAD976D2E73B98F /* Pods-acara.inUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-acara.inUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F32CEF8D35B76DA60A167AC1554614E8 /* Pods-acara.inTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acara.inTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F67AB02D14FA3E3E1781FDB84D074665 /* Pods-acara.inUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-acara.inUITests.modulemap"; sourceTree = "<group>"; };
+		FB7996AF8002935A16CF274AA3AE52B1 /* Pods-acara.in-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-acara.in-frameworks.sh"; sourceTree = "<group>"; };
+		FF070C3D9CA400F765AE2929911C2F73 /* HMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMAC.swift; path = Sources/HMAC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3693F69EC1EB7A28CCD37D92A5E4A69C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17393D3448BFB10186ADFB6C9CBCCC48 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B49F19C6C30BB9F7101476379A594AC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A6F396E17A570BDFD6CA5FBC57B41F4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5EF1B320113465D1FB8C19B8EAD9040 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A640ADE7B66D3B7F5C6AE09ED056C4C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE2104A27978C81AECC50E191EFD699 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9673E6DC1978A3570F513DFB20F5D33A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0DAFD8CBAD464D24D7355FBAFA3CD058 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA2827D4C0C4399A0E68074E82A69F75 /* Info.plist */,
+				157F04C48DFC24387F01FE53875EDBAD /* JSONWebToken.modulemap */,
+				96B9058BD5356FCE300A3CF9F53548C0 /* JSONWebToken.xcconfig */,
+				773A30D58ADCE6997E8E16CBB1FA6810 /* JSONWebToken-dummy.m */,
+				63546CC64D55FF0059F99B9DF4950B8A /* JSONWebToken-prefix.pch */,
+				16266C6C28A6FB3CB3CBB504DA5292B1 /* JSONWebToken-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JSONWebToken";
+			sourceTree = "<group>";
+		};
+		189672FCC56931F342D5BE5D399CB40F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5AD289F1450F078B11ED87B418F6865A /* GoogleMaps */,
+				6DC358E41DCD905AB91E11B0C43D5E9C /* GooglePlaces */,
+				5B0CAA88551F90CBABE9CDFBFD7B0DDF /* JSONWebToken */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3707E9EB10DFA00A79A8334A8C7E0FAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB62923AF4E3C17C89B9A765565E07FA /* GooglePlaces.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4EE3D183C0CD6C6A506E99F75AA0BE34 /* Pods-acara.inUITests */ = {
+			isa = PBXGroup;
+			children = (
+				04E16375A563CF464176BC26724801BF /* Info.plist */,
+				F67AB02D14FA3E3E1781FDB84D074665 /* Pods-acara.inUITests.modulemap */,
+				924BBCE99D712C0D5B715367D1A8B831 /* Pods-acara.inUITests-acknowledgements.markdown */,
+				3D7F7BA2134426CAE6AF7B06074D8A5D /* Pods-acara.inUITests-acknowledgements.plist */,
+				3E41C85FF89714280B5C91C208EF0126 /* Pods-acara.inUITests-dummy.m */,
+				D527C332A22830956BF85E3B69CC7464 /* Pods-acara.inUITests-frameworks.sh */,
+				B2EB974137C9149122AF9C0EAD48919C /* Pods-acara.inUITests-resources.sh */,
+				CE14B923760F512A2B25C27F7A5788D1 /* Pods-acara.inUITests-umbrella.h */,
+				F1500C3F3029CD6F3EAD976D2E73B98F /* Pods-acara.inUITests.debug.xcconfig */,
+				0B84D69FD56558ADEB7A1BB5EADDAB73 /* Pods-acara.inUITests.release.xcconfig */,
+			);
+			name = "Pods-acara.inUITests";
+			path = "Target Support Files/Pods-acara.inUITests";
+			sourceTree = "<group>";
+		};
+		5381AA8CCBCC65FACBBEB1B80172F4E5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F479FF21F63535EB27D26D5E0EE1C894 /* Pods-acara.in */,
+				9BDCCAA02AE534282F972C91CD72A0BC /* Pods-acara.inTests */,
+				4EE3D183C0CD6C6A506E99F75AA0BE34 /* Pods-acara.inUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		57A3D7D424AC50815DA3FFFCB3828050 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE0922CDA145C6504DCF041C06E43335 /* JWT.framework */,
+				5FD4E780AE09C2E4AFA18D9875C152B6 /* Pods_acara_in.framework */,
+				29EDC45C183964D0C415153B3ACC73DE /* Pods_acara_inTests.framework */,
+				A907DCD8296FD022BA8484B81FFDBB44 /* Pods_acara_inUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5AD289F1450F078B11ED87B418F6865A /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				B355C45BD04341723E90E9A3360B09E0 /* Base */,
+				C09F483196E9E4F9780F68538B3097EF /* Maps */,
+			);
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		5B0CAA88551F90CBABE9CDFBFD7B0DDF /* JSONWebToken */ = {
+			isa = PBXGroup;
+			children = (
+				21952F78C52DFB32DDC92944E2406DE4 /* Base64.swift */,
+				2C73211ADF26955E9C35C1EE3868E238 /* Claims.swift */,
+				70BB6866A864A1B73FCA845C1B3584FF /* ClaimSet.swift */,
+				9A33E23E4CA0BCE26C3A3C5EDD82BBE5 /* Decode.swift */,
+				0C84A30B567ADC07C6545847CC35ED1D /* Encode.swift */,
+				FF070C3D9CA400F765AE2929911C2F73 /* HMAC.swift */,
+				65EB9D159381A7C46CC0CFD55D352EA4 /* HMACCommonCrypto.swift */,
+				4014830B9E0BEF3577ED39C89052F981 /* JOSEHeader.swift */,
+				0FFCE9381FD8F0ADAC62FD3CDDE92492 /* JWT.swift */,
+				0DAFD8CBAD464D24D7355FBAFA3CD058 /* Support Files */,
+			);
+			path = JSONWebToken;
+			sourceTree = "<group>";
+		};
+		6DC358E41DCD905AB91E11B0C43D5E9C /* GooglePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				3707E9EB10DFA00A79A8334A8C7E0FAA /* Frameworks */,
+				7E7F84E509BE48E0F69497E19F2B244C /* Resources */,
+			);
+			path = GooglePlaces;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				189672FCC56931F342D5BE5D399CB40F /* Pods */,
+				57A3D7D424AC50815DA3FFFCB3828050 /* Products */,
+				5381AA8CCBCC65FACBBEB1B80172F4E5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7E7F84E509BE48E0F69497E19F2B244C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0BF958DDC25EDC5C1B035ADE2E9EDD1F /* GooglePlaces.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8155E1B0ED5CF9E3228167FA4F152FB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E75E9CCC263C0C61BDB3F81B7A667E4 /* GoogleMaps.framework */,
+				B4357C3FFF905D21073DB24D95EE9634 /* GoogleMapsCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81AF3BA6151A43CBA9C66DD8F2863966 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84820D2D0CB0C14963A03647278C18E6 /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9BDCCAA02AE534282F972C91CD72A0BC /* Pods-acara.inTests */ = {
+			isa = PBXGroup;
+			children = (
+				3C6EC7F7A9C8DE5E31FE618378A5A082 /* Info.plist */,
+				A96CE80FA171F0333189235925BCD304 /* Pods-acara.inTests.modulemap */,
+				82C7B762E4ED1D1F3A7831CC211D8021 /* Pods-acara.inTests-acknowledgements.markdown */,
+				F32CEF8D35B76DA60A167AC1554614E8 /* Pods-acara.inTests-acknowledgements.plist */,
+				5C871E6E2FD9E59FDB6060989EA51A49 /* Pods-acara.inTests-dummy.m */,
+				89D37531DF92F5027457BE219DDCEE27 /* Pods-acara.inTests-frameworks.sh */,
+				5F432BD34BA3EED1672E411C9E09ADCD /* Pods-acara.inTests-resources.sh */,
+				A7855716E47654BCBA444BCA07D5FBD5 /* Pods-acara.inTests-umbrella.h */,
+				C56CEDFD656BD44658744778911C96AB /* Pods-acara.inTests.debug.xcconfig */,
+				A44BAFFE496861B83E14F80BA8E4A797 /* Pods-acara.inTests.release.xcconfig */,
+			);
+			name = "Pods-acara.inTests";
+			path = "Target Support Files/Pods-acara.inTests";
+			sourceTree = "<group>";
+		};
+		B355C45BD04341723E90E9A3360B09E0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C3DD647234B1908E6A974EA0D3E89ACA /* Frameworks */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C09F483196E9E4F9780F68538B3097EF /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				8155E1B0ED5CF9E3228167FA4F152FB2 /* Frameworks */,
+				81AF3BA6151A43CBA9C66DD8F2863966 /* Resources */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		C3DD647234B1908E6A974EA0D3E89ACA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62B6A68C5A6B3A0171A2A783661029BD /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F479FF21F63535EB27D26D5E0EE1C894 /* Pods-acara.in */ = {
+			isa = PBXGroup;
+			children = (
+				990F248C8D173ACAFCAF515444651DE2 /* Info.plist */,
+				68BE4755C845B086EAD9A369C5410EC4 /* Pods-acara.in.modulemap */,
+				D149E2C47404DC0B9DE678591B1162AD /* Pods-acara.in-acknowledgements.markdown */,
+				E7DFE6F3EBAFF6208A6D83EE83C009ED /* Pods-acara.in-acknowledgements.plist */,
+				8A4451F465B8C89912FB6AF2B7DE76A5 /* Pods-acara.in-dummy.m */,
+				FB7996AF8002935A16CF274AA3AE52B1 /* Pods-acara.in-frameworks.sh */,
+				76C6A17F7E214B9E7F0432BF38A3B089 /* Pods-acara.in-resources.sh */,
+				745287A62A7E70E1359AC7DE8A868DEE /* Pods-acara.in-umbrella.h */,
+				7A18E58387DC6A03AC70D8533448E214 /* Pods-acara.in.debug.xcconfig */,
+				BA9EC4097B6B3E5C74F249EB38EE40D3 /* Pods-acara.in.release.xcconfig */,
+			);
+			name = "Pods-acara.in";
+			path = "Target Support Files/Pods-acara.in";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7A53D7FB93DED12CE18121E48DC31CEE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F897F8613C13610FD1CE755AAEB330A9 /* Pods-acara.inUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3CD0B1001B1DACC0FBA1AFFC253C875 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8D9FFBF0C022796252F3B80F9B74E36 /* Pods-acara.inTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD0AB616BBC74FB13F857CEA9BDA5678 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1901AC29905600662E289A7B07BB3F23 /* Pods-acara.in-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE29BC8B73379F15585772172FA844BA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5225B5598072D741D8303EB9D122925E /* JSONWebToken-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		04ACCD651C30E7B6FE864F0FFE983BA5 /* JSONWebToken */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5B0B4ADA14C207585034DB73CDE6843 /* Build configuration list for PBXNativeTarget "JSONWebToken" */;
+			buildPhases = (
+				25FDF0567BC2F55E7F24D8B376A9819B /* Sources */,
+				EDE2104A27978C81AECC50E191EFD699 /* Frameworks */,
+				FE29BC8B73379F15585772172FA844BA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JSONWebToken;
+			productName = JSONWebToken;
+			productReference = AE0922CDA145C6504DCF041C06E43335 /* JWT.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		65401F511B0ED250B6234904F0C98103 /* Pods-acara.inTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FC6BE08E422839B34058BC2B38845D8 /* Build configuration list for PBXNativeTarget "Pods-acara.inTests" */;
+			buildPhases = (
+				9F7B6D4494230A3BDB4030E8C1770F74 /* Sources */,
+				B49F19C6C30BB9F7101476379A594AC3 /* Frameworks */,
+				B3CD0B1001B1DACC0FBA1AFFC253C875 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-acara.inTests";
+			productName = "Pods-acara.inTests";
+			productReference = 29EDC45C183964D0C415153B3ACC73DE /* Pods_acara_inTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D3CEE08F88B4FA2F6709FA7F95D7AA11 /* Pods-acara.inUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7E3246652BBAE80D026408616BA2EC5 /* Build configuration list for PBXNativeTarget "Pods-acara.inUITests" */;
+			buildPhases = (
+				6F7CD85ABDCBF471638BE7554F2824C4 /* Sources */,
+				E5EF1B320113465D1FB8C19B8EAD9040 /* Frameworks */,
+				7A53D7FB93DED12CE18121E48DC31CEE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-acara.inUITests";
+			productName = "Pods-acara.inUITests";
+			productReference = A907DCD8296FD022BA8484B81FFDBB44 /* Pods_acara_inUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F553B3AD3D448AD58945F71DB72C2651 /* Pods-acara.in */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ED69BCF3F6FCE0DAF54AE58CD6F2D4A /* Build configuration list for PBXNativeTarget "Pods-acara.in" */;
+			buildPhases = (
+				1D0EE36F8B6B34E6B5F3ACDC4DDEA4A6 /* Sources */,
+				3693F69EC1EB7A28CCD37D92A5E4A69C /* Frameworks */,
+				CD0AB616BBC74FB13F857CEA9BDA5678 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0D2F57D0E33BE87D1CB984998EAF5267 /* PBXTargetDependency */,
+			);
+			name = "Pods-acara.in";
+			productName = "Pods-acara.in";
+			productReference = 5FD4E780AE09C2E4AFA18D9875C152B6 /* Pods_acara_in.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 57A3D7D424AC50815DA3FFFCB3828050 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04ACCD651C30E7B6FE864F0FFE983BA5 /* JSONWebToken */,
+				F553B3AD3D448AD58945F71DB72C2651 /* Pods-acara.in */,
+				65401F511B0ED250B6234904F0C98103 /* Pods-acara.inTests */,
+				D3CEE08F88B4FA2F6709FA7F95D7AA11 /* Pods-acara.inUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D0EE36F8B6B34E6B5F3ACDC4DDEA4A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3178C2C897F5E745224E4CCB3D26B5E9 /* Pods-acara.in-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25FDF0567BC2F55E7F24D8B376A9819B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D738A06230ED68D87E31FD99FB674CA /* Base64.swift in Sources */,
+				3BFCB70093CDC6323C4CDC56A8309182 /* Claims.swift in Sources */,
+				43CB9FBF4F563866570B3AADCC6E6949 /* ClaimSet.swift in Sources */,
+				B5F5B5C06333376202D27E88D7D5BF09 /* Decode.swift in Sources */,
+				5F7B8955B7CFB46DCF40C334C1FA868D /* Encode.swift in Sources */,
+				D86844F60046B5C66BF80E3105FE2930 /* HMAC.swift in Sources */,
+				039D41FAE2DD868260758D89001EC69A /* HMACCommonCrypto.swift in Sources */,
+				5D5490C4D59F4170AB2EE20A9DC87820 /* JOSEHeader.swift in Sources */,
+				B37E22D2C326CEDE8C0B899C0BDD573D /* JSONWebToken-dummy.m in Sources */,
+				1C8DE41099A890D58CA488076828B350 /* JWT.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F7CD85ABDCBF471638BE7554F2824C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7578EB7E4048855F3893508E6E2555B0 /* Pods-acara.inUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F7B6D4494230A3BDB4030E8C1770F74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2E1EA5AAC9022FC4FD634FBEEBB6539 /* Pods-acara.inTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0D2F57D0E33BE87D1CB984998EAF5267 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JSONWebToken;
+			target = 04ACCD651C30E7B6FE864F0FFE983BA5 /* JSONWebToken */;
+			targetProxy = B7FB472264617B4DF7A2FE5F14F4DBB3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D23278938ADF334174C5BF2A4B6B1B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		2C691F59B6D3B2E77E668361AE959FCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C56CEDFD656BD44658744778911C96AB /* Pods-acara.inTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-acara.inTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-acara.inTests/Pods-acara.inTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_acara_inTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6C2AB5E878B65320696588523DC01FB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1500C3F3029CD6F3EAD976D2E73B98F /* Pods-acara.inUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-acara.inUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-acara.inUITests/Pods-acara.inUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_acara_inUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		748170F03F598CFDB3EC688795B9BE2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96B9058BD5356FCE300A3CF9F53548C0 /* JSONWebToken.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JSONWebToken/JSONWebToken-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JSONWebToken/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JSONWebToken/JSONWebToken.modulemap";
+				PRODUCT_NAME = JWT;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		78D3A09C00777E06235FFE25BA576450 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B84D69FD56558ADEB7A1BB5EADDAB73 /* Pods-acara.inUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-acara.inUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-acara.inUITests/Pods-acara.inUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_acara_inUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8C35DE70529BF805E34727BF5911A90E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA9EC4097B6B3E5C74F249EB38EE40D3 /* Pods-acara.in.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-acara.in/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-acara.in/Pods-acara.in.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_acara_in;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		93B1CB269F177B126A2557053A8081F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A44BAFFE496861B83E14F80BA8E4A797 /* Pods-acara.inTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-acara.inTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-acara.inTests/Pods-acara.inTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_acara_inTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		995C3A53DEAA96B47E756185345E180D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		C316FBA1CBE76E8485CDF0CD8BE60693 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A18E58387DC6A03AC70D8533448E214 /* Pods-acara.in.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-acara.in/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-acara.in/Pods-acara.in.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_acara_in;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CFF13A118452B8A4D158DFC6392F39C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96B9058BD5356FCE300A3CF9F53548C0 /* JSONWebToken.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JSONWebToken/JSONWebToken-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JSONWebToken/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JSONWebToken/JSONWebToken.modulemap";
+				PRODUCT_NAME = JWT;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1ED69BCF3F6FCE0DAF54AE58CD6F2D4A /* Build configuration list for PBXNativeTarget "Pods-acara.in" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C316FBA1CBE76E8485CDF0CD8BE60693 /* Debug */,
+				8C35DE70529BF805E34727BF5911A90E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				995C3A53DEAA96B47E756185345E180D /* Debug */,
+				1D23278938ADF334174C5BF2A4B6B1B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FC6BE08E422839B34058BC2B38845D8 /* Build configuration list for PBXNativeTarget "Pods-acara.inTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C691F59B6D3B2E77E668361AE959FCA /* Debug */,
+				93B1CB269F177B126A2557053A8081F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7E3246652BBAE80D026408616BA2EC5 /* Build configuration list for PBXNativeTarget "Pods-acara.inUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C2AB5E878B65320696588523DC01FB1 /* Debug */,
+				78D3A09C00777E06235FFE25BA576450 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5B0B4ADA14C207585034DB73CDE6843 /* Build configuration list for PBXNativeTarget "JSONWebToken" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFF13A118452B8A4D158DFC6392F39C8 /* Debug */,
+				748170F03F598CFDB3EC688795B9BE2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

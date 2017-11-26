@@ -1,0 +1,776 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		305E95D31FCAA8B800A17231 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305E95D21FCAA8B800A17231 /* AppDelegate.swift */; };
+		305E95D51FCAA8B800A17231 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305E95D41FCAA8B800A17231 /* ViewController.swift */; };
+		305E95D81FCAA8B900A17231 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305E95D61FCAA8B900A17231 /* Main.storyboard */; };
+		305E95DA1FCAA8B900A17231 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 305E95D91FCAA8B900A17231 /* Assets.xcassets */; };
+		305E95DD1FCAA8B900A17231 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305E95DB1FCAA8B900A17231 /* LaunchScreen.storyboard */; };
+		305E95E81FCAA8BA00A17231 /* acara_inTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305E95E71FCAA8BA00A17231 /* acara_inTests.swift */; };
+		305E95F31FCAA8BA00A17231 /* acara_inUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305E95F21FCAA8BA00A17231 /* acara_inUITests.swift */; };
+		98A41ACF341CFAAA9822100D /* Pods_acara_inTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBD35223CAD6769C1744B17 /* Pods_acara_inTests.framework */; };
+		A73DBC538E0AA7427DDB14CC /* Pods_acara_inUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26511CBB7A60E8C084FFAD73 /* Pods_acara_inUITests.framework */; };
+		E7E0B4C137C4A7930506F0C8 /* Pods_acara_in.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E43A5833E2516BF927CDC3F /* Pods_acara_in.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		305E95E41FCAA8BA00A17231 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 305E95C71FCAA8B600A17231 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 305E95CE1FCAA8B700A17231;
+			remoteInfo = acara.in;
+		};
+		305E95EF1FCAA8BA00A17231 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 305E95C71FCAA8B600A17231 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 305E95CE1FCAA8B700A17231;
+			remoteInfo = acara.in;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		26511CBB7A60E8C084FFAD73 /* Pods_acara_inUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_acara_inUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C205AA44704E1D4E37C7C27 /* Pods-acara.inUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-acara.inUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-acara.inUITests/Pods-acara.inUITests.release.xcconfig"; sourceTree = "<group>"; };
+		305E95CF1FCAA8B800A17231 /* acara.in.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = acara.in.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		305E95D21FCAA8B800A17231 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		305E95D41FCAA8B800A17231 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		305E95D71FCAA8B900A17231 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		305E95D91FCAA8B900A17231 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		305E95DC1FCAA8B900A17231 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		305E95DE1FCAA8B900A17231 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		305E95E31FCAA8BA00A17231 /* acara.inTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = acara.inTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		305E95E71FCAA8BA00A17231 /* acara_inTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = acara_inTests.swift; sourceTree = "<group>"; };
+		305E95E91FCAA8BA00A17231 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		305E95EE1FCAA8BA00A17231 /* acara.inUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = acara.inUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		305E95F21FCAA8BA00A17231 /* acara_inUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = acara_inUITests.swift; sourceTree = "<group>"; };
+		305E95F41FCAA8BA00A17231 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		854FD9B39B64DD303C37640E /* Pods-acara.inUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-acara.inUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-acara.inUITests/Pods-acara.inUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8E43A5833E2516BF927CDC3F /* Pods_acara_in.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_acara_in.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8BF935C81263DEF502E153B /* Pods-acara.in.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-acara.in.release.xcconfig"; path = "Pods/Target Support Files/Pods-acara.in/Pods-acara.in.release.xcconfig"; sourceTree = "<group>"; };
+		AA965D38FC16616689E017C7 /* Pods-acara.in.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-acara.in.debug.xcconfig"; path = "Pods/Target Support Files/Pods-acara.in/Pods-acara.in.debug.xcconfig"; sourceTree = "<group>"; };
+		B395FA1F645AE880097D0030 /* Pods-acara.inTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-acara.inTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-acara.inTests/Pods-acara.inTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BEBD35223CAD6769C1744B17 /* Pods_acara_inTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_acara_inTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB7D58708F377E6742F29280 /* Pods-acara.inTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-acara.inTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-acara.inTests/Pods-acara.inTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		305E95CC1FCAA8B700A17231 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7E0B4C137C4A7930506F0C8 /* Pods_acara_in.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		305E95E01FCAA8BA00A17231 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98A41ACF341CFAAA9822100D /* Pods_acara_inTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		305E95EB1FCAA8BA00A17231 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A73DBC538E0AA7427DDB14CC /* Pods_acara_inUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		250D99FC0CDC66AA0A82EE8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E43A5833E2516BF927CDC3F /* Pods_acara_in.framework */,
+				BEBD35223CAD6769C1744B17 /* Pods_acara_inTests.framework */,
+				26511CBB7A60E8C084FFAD73 /* Pods_acara_inUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		305E95C61FCAA8B600A17231 = {
+			isa = PBXGroup;
+			children = (
+				305E95D11FCAA8B800A17231 /* acara.in */,
+				305E95E61FCAA8BA00A17231 /* acara.inTests */,
+				305E95F11FCAA8BA00A17231 /* acara.inUITests */,
+				305E95D01FCAA8B800A17231 /* Products */,
+				51A4D6A305C7D084E5FF06C0 /* Pods */,
+				250D99FC0CDC66AA0A82EE8A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		305E95D01FCAA8B800A17231 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				305E95CF1FCAA8B800A17231 /* acara.in.app */,
+				305E95E31FCAA8BA00A17231 /* acara.inTests.xctest */,
+				305E95EE1FCAA8BA00A17231 /* acara.inUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		305E95D11FCAA8B800A17231 /* acara.in */ = {
+			isa = PBXGroup;
+			children = (
+				30A753B21FCB27C0007733A9 /* Login */,
+				305E95D21FCAA8B800A17231 /* AppDelegate.swift */,
+				305E95D41FCAA8B800A17231 /* ViewController.swift */,
+				305E95D61FCAA8B900A17231 /* Main.storyboard */,
+				305E95D91FCAA8B900A17231 /* Assets.xcassets */,
+				305E95DB1FCAA8B900A17231 /* LaunchScreen.storyboard */,
+				305E95DE1FCAA8B900A17231 /* Info.plist */,
+			);
+			path = acara.in;
+			sourceTree = "<group>";
+		};
+		305E95E61FCAA8BA00A17231 /* acara.inTests */ = {
+			isa = PBXGroup;
+			children = (
+				305E95E71FCAA8BA00A17231 /* acara_inTests.swift */,
+				305E95E91FCAA8BA00A17231 /* Info.plist */,
+			);
+			path = acara.inTests;
+			sourceTree = "<group>";
+		};
+		305E95F11FCAA8BA00A17231 /* acara.inUITests */ = {
+			isa = PBXGroup;
+			children = (
+				305E95F21FCAA8BA00A17231 /* acara_inUITests.swift */,
+				305E95F41FCAA8BA00A17231 /* Info.plist */,
+			);
+			path = acara.inUITests;
+			sourceTree = "<group>";
+		};
+		30A753B21FCB27C0007733A9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		51A4D6A305C7D084E5FF06C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA965D38FC16616689E017C7 /* Pods-acara.in.debug.xcconfig */,
+				A8BF935C81263DEF502E153B /* Pods-acara.in.release.xcconfig */,
+				B395FA1F645AE880097D0030 /* Pods-acara.inTests.debug.xcconfig */,
+				DB7D58708F377E6742F29280 /* Pods-acara.inTests.release.xcconfig */,
+				854FD9B39B64DD303C37640E /* Pods-acara.inUITests.debug.xcconfig */,
+				2C205AA44704E1D4E37C7C27 /* Pods-acara.inUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		305E95CE1FCAA8B700A17231 /* acara.in */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 305E95F71FCAA8BB00A17231 /* Build configuration list for PBXNativeTarget "acara.in" */;
+			buildPhases = (
+				B53BDE8EFF6EFB1E9CC31D65 /* [CP] Check Pods Manifest.lock */,
+				305E95CB1FCAA8B700A17231 /* Sources */,
+				305E95CC1FCAA8B700A17231 /* Frameworks */,
+				305E95CD1FCAA8B700A17231 /* Resources */,
+				77D4F5909BF81844B6DE2807 /* [CP] Embed Pods Frameworks */,
+				22277B022692B03BCAAD203A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = acara.in;
+			productName = acara.in;
+			productReference = 305E95CF1FCAA8B800A17231 /* acara.in.app */;
+			productType = "com.apple.product-type.application";
+		};
+		305E95E21FCAA8BA00A17231 /* acara.inTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 305E95FA1FCAA8BB00A17231 /* Build configuration list for PBXNativeTarget "acara.inTests" */;
+			buildPhases = (
+				78E69F8C1BC53735C6675220 /* [CP] Check Pods Manifest.lock */,
+				305E95DF1FCAA8BA00A17231 /* Sources */,
+				305E95E01FCAA8BA00A17231 /* Frameworks */,
+				305E95E11FCAA8BA00A17231 /* Resources */,
+				D46A478A60E1AD3ABD40A0D3 /* [CP] Embed Pods Frameworks */,
+				E4BCA1CF615563D505244BBD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				305E95E51FCAA8BA00A17231 /* PBXTargetDependency */,
+			);
+			name = acara.inTests;
+			productName = acara.inTests;
+			productReference = 305E95E31FCAA8BA00A17231 /* acara.inTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		305E95ED1FCAA8BA00A17231 /* acara.inUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 305E95FD1FCAA8BB00A17231 /* Build configuration list for PBXNativeTarget "acara.inUITests" */;
+			buildPhases = (
+				A496E718469E636A3488737F /* [CP] Check Pods Manifest.lock */,
+				305E95EA1FCAA8BA00A17231 /* Sources */,
+				305E95EB1FCAA8BA00A17231 /* Frameworks */,
+				305E95EC1FCAA8BA00A17231 /* Resources */,
+				E05EF84331748737F9CC002A /* [CP] Embed Pods Frameworks */,
+				E14C49DF5A7D89880F668EEC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				305E95F01FCAA8BA00A17231 /* PBXTargetDependency */,
+			);
+			name = acara.inUITests;
+			productName = acara.inUITests;
+			productReference = 305E95EE1FCAA8BA00A17231 /* acara.inUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		305E95C71FCAA8B600A17231 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Fathoni Adi Kurniawan";
+				TargetAttributes = {
+					305E95CE1FCAA8B700A17231 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					305E95E21FCAA8BA00A17231 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 305E95CE1FCAA8B700A17231;
+					};
+					305E95ED1FCAA8BA00A17231 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 305E95CE1FCAA8B700A17231;
+					};
+				};
+			};
+			buildConfigurationList = 305E95CA1FCAA8B600A17231 /* Build configuration list for PBXProject "acara.in" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 305E95C61FCAA8B600A17231;
+			productRefGroup = 305E95D01FCAA8B800A17231 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				305E95CE1FCAA8B700A17231 /* acara.in */,
+				305E95E21FCAA8BA00A17231 /* acara.inTests */,
+				305E95ED1FCAA8BA00A17231 /* acara.inUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		305E95CD1FCAA8B700A17231 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				305E95DD1FCAA8B900A17231 /* LaunchScreen.storyboard in Resources */,
+				305E95DA1FCAA8B900A17231 /* Assets.xcassets in Resources */,
+				305E95D81FCAA8B900A17231 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		305E95E11FCAA8BA00A17231 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		305E95EC1FCAA8BA00A17231 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22277B022692B03BCAAD203A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-acara.in/Pods-acara.in-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-acara.in/Pods-acara.in-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77D4F5909BF81844B6DE2807 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-acara.in/Pods-acara.in-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JSONWebToken/JWT.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWT.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-acara.in/Pods-acara.in-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78E69F8C1BC53735C6675220 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-acara.inTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A496E718469E636A3488737F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-acara.inUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B53BDE8EFF6EFB1E9CC31D65 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-acara.in-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D46A478A60E1AD3ABD40A0D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-acara.inTests/Pods-acara.inTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E05EF84331748737F9CC002A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-acara.inUITests/Pods-acara.inUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E14C49DF5A7D89880F668EEC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-acara.inUITests/Pods-acara.inUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4BCA1CF615563D505244BBD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-acara.inTests/Pods-acara.inTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		305E95CB1FCAA8B700A17231 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				305E95D51FCAA8B800A17231 /* ViewController.swift in Sources */,
+				305E95D31FCAA8B800A17231 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		305E95DF1FCAA8BA00A17231 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				305E95E81FCAA8BA00A17231 /* acara_inTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		305E95EA1FCAA8BA00A17231 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				305E95F31FCAA8BA00A17231 /* acara_inUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		305E95E51FCAA8BA00A17231 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 305E95CE1FCAA8B700A17231 /* acara.in */;
+			targetProxy = 305E95E41FCAA8BA00A17231 /* PBXContainerItemProxy */;
+		};
+		305E95F01FCAA8BA00A17231 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 305E95CE1FCAA8B700A17231 /* acara.in */;
+			targetProxy = 305E95EF1FCAA8BA00A17231 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		305E95D61FCAA8B900A17231 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				305E95D71FCAA8B900A17231 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		305E95DB1FCAA8B900A17231 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				305E95DC1FCAA8B900A17231 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		305E95F51FCAA8BA00A17231 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		305E95F61FCAA8BA00A17231 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		305E95F81FCAA8BB00A17231 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA965D38FC16616689E017C7 /* Pods-acara.in.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D79J6C4H44;
+				INFOPLIST_FILE = acara.in/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fathoniadi.acara-in";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		305E95F91FCAA8BB00A17231 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8BF935C81263DEF502E153B /* Pods-acara.in.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D79J6C4H44;
+				INFOPLIST_FILE = acara.in/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fathoniadi.acara-in";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		305E95FB1FCAA8BB00A17231 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B395FA1F645AE880097D0030 /* Pods-acara.inTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = acara.inTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fathoniadi.acara-inTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/acara.in.app/acara.in";
+			};
+			name = Debug;
+		};
+		305E95FC1FCAA8BB00A17231 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB7D58708F377E6742F29280 /* Pods-acara.inTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = acara.inTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fathoniadi.acara-inTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/acara.in.app/acara.in";
+			};
+			name = Release;
+		};
+		305E95FE1FCAA8BB00A17231 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 854FD9B39B64DD303C37640E /* Pods-acara.inUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = acara.inUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fathoniadi.acara-inUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = acara.in;
+			};
+			name = Debug;
+		};
+		305E95FF1FCAA8BB00A17231 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C205AA44704E1D4E37C7C27 /* Pods-acara.inUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = acara.inUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "fathoniadi.acara-inUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = acara.in;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		305E95CA1FCAA8B600A17231 /* Build configuration list for PBXProject "acara.in" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				305E95F51FCAA8BA00A17231 /* Debug */,
+				305E95F61FCAA8BA00A17231 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		305E95F71FCAA8BB00A17231 /* Build configuration list for PBXNativeTarget "acara.in" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				305E95F81FCAA8BB00A17231 /* Debug */,
+				305E95F91FCAA8BB00A17231 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		305E95FA1FCAA8BB00A17231 /* Build configuration list for PBXNativeTarget "acara.inTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				305E95FB1FCAA8BB00A17231 /* Debug */,
+				305E95FC1FCAA8BB00A17231 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		305E95FD1FCAA8BB00A17231 /* Build configuration list for PBXNativeTarget "acara.inUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				305E95FE1FCAA8BB00A17231 /* Debug */,
+				305E95FF1FCAA8BB00A17231 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 305E95C71FCAA8B600A17231 /* Project object */;
+}
