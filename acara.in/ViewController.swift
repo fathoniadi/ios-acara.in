@@ -11,6 +11,16 @@ import JWT
 
 class ViewController: UIViewController {
 
+  
+    @IBAction func login_button(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "login_sogue", sender: self)
+    }
+    
+    @IBAction func signup_button(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "daftar_sogue", sender: self)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,6 +29,20 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func returned(segue: UIStoryboardSegue) {
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated);
+        super.viewWillDisappear(animated)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
 

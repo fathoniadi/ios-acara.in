@@ -14,6 +14,10 @@
 		305E95DD1FCAA8B900A17231 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305E95DB1FCAA8B900A17231 /* LaunchScreen.storyboard */; };
 		305E95E81FCAA8BA00A17231 /* acara_inTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305E95E71FCAA8BA00A17231 /* acara_inTests.swift */; };
 		305E95F31FCAA8BA00A17231 /* acara_inUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305E95F21FCAA8BA00A17231 /* acara_inUITests.swift */; };
+		30EBDB041FCB2E26003DCE85 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBDB031FCB2E26003DCE85 /* LoginController.swift */; };
+		30EBDB071FCB339E003DCE85 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30EBDB061FCB339E003DCE85 /* Dashboard.storyboard */; };
+		30EBDB091FCB38AF003DCE85 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBDB081FCB38AF003DCE85 /* HomeController.swift */; };
+		30EBDB0B1FCB3D5F003DCE85 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBDB0A1FCB3D5F003DCE85 /* MenuController.swift */; };
 		98A41ACF341CFAAA9822100D /* Pods_acara_inTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBD35223CAD6769C1744B17 /* Pods_acara_inTests.framework */; };
 		A73DBC538E0AA7427DDB14CC /* Pods_acara_inUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26511CBB7A60E8C084FFAD73 /* Pods_acara_inUITests.framework */; };
 		E7E0B4C137C4A7930506F0C8 /* Pods_acara_in.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E43A5833E2516BF927CDC3F /* Pods_acara_in.framework */; };
@@ -52,6 +56,10 @@
 		305E95EE1FCAA8BA00A17231 /* acara.inUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = acara.inUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		305E95F21FCAA8BA00A17231 /* acara_inUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = acara_inUITests.swift; sourceTree = "<group>"; };
 		305E95F41FCAA8BA00A17231 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30EBDB031FCB2E26003DCE85 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		30EBDB061FCB339E003DCE85 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		30EBDB081FCB38AF003DCE85 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		30EBDB0A1FCB3D5F003DCE85 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		854FD9B39B64DD303C37640E /* Pods-acara.inUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-acara.inUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-acara.inUITests/Pods-acara.inUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8E43A5833E2516BF927CDC3F /* Pods_acara_in.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_acara_in.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8BF935C81263DEF502E153B /* Pods-acara.in.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-acara.in.release.xcconfig"; path = "Pods/Target Support Files/Pods-acara.in/Pods-acara.in.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +132,7 @@
 		305E95D11FCAA8B800A17231 /* acara.in */ = {
 			isa = PBXGroup;
 			children = (
+				30EBDB051FCB3375003DCE85 /* Dashboard */,
 				30A753B21FCB27C0007733A9 /* Login */,
 				305E95D21FCAA8B800A17231 /* AppDelegate.swift */,
 				305E95D41FCAA8B800A17231 /* ViewController.swift */,
@@ -156,8 +165,19 @@
 		30A753B21FCB27C0007733A9 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				30EBDB031FCB2E26003DCE85 /* LoginController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		30EBDB051FCB3375003DCE85 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				30EBDB061FCB339E003DCE85 /* Dashboard.storyboard */,
+				30EBDB081FCB38AF003DCE85 /* HomeController.swift */,
+				30EBDB0A1FCB3D5F003DCE85 /* MenuController.swift */,
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 		51A4D6A305C7D084E5FF06C0 /* Pods */ = {
@@ -292,6 +312,7 @@
 				305E95DD1FCAA8B900A17231 /* LaunchScreen.storyboard in Resources */,
 				305E95DA1FCAA8B900A17231 /* Assets.xcassets in Resources */,
 				305E95D81FCAA8B900A17231 /* Main.storyboard in Resources */,
+				30EBDB071FCB339E003DCE85 /* Dashboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,7 +491,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30EBDB0B1FCB3D5F003DCE85 /* MenuController.swift in Sources */,
+				30EBDB091FCB38AF003DCE85 /* HomeController.swift in Sources */,
 				305E95D51FCAA8B800A17231 /* ViewController.swift in Sources */,
+				30EBDB041FCB2E26003DCE85 /* LoginController.swift in Sources */,
 				305E95D31FCAA8B800A17231 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
