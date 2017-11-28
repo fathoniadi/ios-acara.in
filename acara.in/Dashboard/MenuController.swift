@@ -9,11 +9,10 @@
 import UIKit
 
 class MenuController: UITableViewController {
-
-    @IBAction func logut_button(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "to_main_story", sender: "self")
-    }
     
+    @IBAction func logout_button(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "to_init_view", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

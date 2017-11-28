@@ -132,6 +132,7 @@
 		305E95D11FCAA8B800A17231 /* acara.in */ = {
 			isa = PBXGroup;
 			children = (
+				306916FC1FCD473100C4E72D /* Acara */,
 				30EBDB051FCB3375003DCE85 /* Dashboard */,
 				30A753B21FCB27C0007733A9 /* Login */,
 				305E95D21FCAA8B800A17231 /* AppDelegate.swift */,
@@ -160,6 +161,13 @@
 				305E95F41FCAA8BA00A17231 /* Info.plist */,
 			);
 			path = acara.inUITests;
+			sourceTree = "<group>";
+		};
+		306916FC1FCD473100C4E72D /* Acara */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Acara;
 			sourceTree = "<group>";
 		};
 		30A753B21FCB27C0007733A9 /* Login */ = {

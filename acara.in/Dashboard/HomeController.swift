@@ -15,6 +15,9 @@ class HomeController: UIViewController, CLLocationManagerDelegate {
     var locationManager = CLLocationManager()
     lazy var mapView = GMSMapView()
     
+    @IBAction func menu_button(_ sender: UIBarButtonItem) {
+        self.performSegue(withIdentifier: "menu_sogue", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
