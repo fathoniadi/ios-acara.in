@@ -14,6 +14,8 @@
 		305E95DD1FCAA8B900A17231 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305E95DB1FCAA8B900A17231 /* LaunchScreen.storyboard */; };
 		305E95E81FCAA8BA00A17231 /* acara_inTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305E95E71FCAA8BA00A17231 /* acara_inTests.swift */; };
 		305E95F31FCAA8BA00A17231 /* acara_inUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305E95F21FCAA8BA00A17231 /* acara_inUITests.swift */; };
+		306916FE1FCDCA1500C4E72D /* AddAcaraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306916FD1FCDCA1500C4E72D /* AddAcaraController.swift */; };
+		308AC9151FD1816000C86AFC /* AddAcara.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308AC9141FD1816000C86AFC /* AddAcara.storyboard */; };
 		30EBDB041FCB2E26003DCE85 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBDB031FCB2E26003DCE85 /* LoginController.swift */; };
 		30EBDB071FCB339E003DCE85 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30EBDB061FCB339E003DCE85 /* Dashboard.storyboard */; };
 		30EBDB091FCB38AF003DCE85 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBDB081FCB38AF003DCE85 /* HomeController.swift */; };
@@ -56,6 +58,8 @@
 		305E95EE1FCAA8BA00A17231 /* acara.inUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = acara.inUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		305E95F21FCAA8BA00A17231 /* acara_inUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = acara_inUITests.swift; sourceTree = "<group>"; };
 		305E95F41FCAA8BA00A17231 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		306916FD1FCDCA1500C4E72D /* AddAcaraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAcaraController.swift; sourceTree = "<group>"; };
+		308AC9141FD1816000C86AFC /* AddAcara.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddAcara.storyboard; sourceTree = "<group>"; };
 		30EBDB031FCB2E26003DCE85 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		30EBDB061FCB339E003DCE85 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		30EBDB081FCB38AF003DCE85 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 		306916FC1FCD473100C4E72D /* Acara */ = {
 			isa = PBXGroup;
 			children = (
+				306916FD1FCDCA1500C4E72D /* AddAcaraController.swift */,
+				308AC9141FD1816000C86AFC /* AddAcara.storyboard */,
 			);
 			path = Acara;
 			sourceTree = "<group>";
@@ -321,6 +327,7 @@
 				305E95DA1FCAA8B900A17231 /* Assets.xcassets in Resources */,
 				305E95D81FCAA8B900A17231 /* Main.storyboard in Resources */,
 				30EBDB071FCB339E003DCE85 /* Dashboard.storyboard in Resources */,
+				308AC9151FD1816000C86AFC /* AddAcara.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +506,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				306916FE1FCDCA1500C4E72D /* AddAcaraController.swift in Sources */,
 				30EBDB0B1FCB3D5F003DCE85 /* MenuController.swift in Sources */,
 				30EBDB091FCB38AF003DCE85 /* HomeController.swift in Sources */,
 				305E95D51FCAA8B800A17231 /* ViewController.swift in Sources */,

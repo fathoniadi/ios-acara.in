@@ -10,6 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--add_acara_storyboard-->
+        <scene sceneID="Mwh-tz-ATC">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="add" storyboardName="AddAcara" referencedIdentifier="add_acara_storyboard" id="mbS-np-kpz" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TDH-6L-0GC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="403" y="-457"/>
+        </scene>
         <!--HomeController-->
         <scene sceneID="k63-fP-7d3">
             <objects>
@@ -26,7 +34,12 @@
                                 <action selector="menu_button:" destination="C9I-iE-ZFR" id="Ox7-Cy-hAr"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="+ Acara" id="Ag2-Pb-Fxu"/>
+                        <barButtonItem key="rightBarButtonItem" title="+ Acara" id="Ag2-Pb-Fxu">
+                            <connections>
+                                <action selector="tambah_acara_button:" destination="C9I-iE-ZFR" id="hW3-pz-h52"/>
+                                <segue destination="mbS-np-kpz" kind="showDetail" id="Rjf-U0-4NG"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="bwI-mb-s9O" kind="show" identifier="menu_sogue" id="0x5-8h-o2N"/>
