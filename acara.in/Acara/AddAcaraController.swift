@@ -30,7 +30,7 @@ class AddAcaraController: UIViewController, CLLocationManagerDelegate, GMSAutoco
         
         viewer2.isMyLocationEnabled = true
         viewer2.settings.myLocationButton = true
-        viewer2.delegate = true
+        viewer2.delegate = self
         
         self.locationManager.delegate = self
         self.locationManager.requestWhenInUseAuthorization()
@@ -59,6 +59,23 @@ class AddAcaraController: UIViewController, CLLocationManagerDelegate, GMSAutoco
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+        viewer2.isMyLocationEnabled = true
+    }
+    
+    func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
+        viewer2.isMyLocationEnabled = true
+        if (gesture) {
+            mapView.selectedMarker = nil
+        }
+    }
+    
+    func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
+        //let marker = GMSMarker()
+        marker.position = coordinate
+        marker.map = viewer2
     }
     
     
