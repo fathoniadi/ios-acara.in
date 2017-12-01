@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Add Acara Controller-->
+        <!--Address-->
         <scene sceneID="NWw-js-bKQ">
             <objects>
                 <viewController storyboardIdentifier="add_acara_storyboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fwq-vC-Bpv" customClass="AddAcaraController" customModule="acara_in" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,7 +34,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Giy-Iw-Xru"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1XI-YI-FFu"/>
+                    <navigationItem key="navigationItem" title="Address" id="1XI-YI-FFu">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0oe-uy-P40"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="xXn-CU-xQm">
+                            <connections>
+                                <action selector="searchButton:" destination="fwq-vC-Bpv" id="vRd-yQ-OF1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="viewer2" destination="UEM-Cj-nro" id="Qfz-tV-5Ja"/>
                     </connections>
@@ -54,7 +61,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="fwq-vC-Bpv" kind="relationship" relationship="rootViewController" id="0nU-qJ-UWL"/>
+                        <segue destination="fwq-vC-Bpv" kind="relationship" relationship="rootViewController" id="8NR-Xt-XFs"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LpX-Vv-IdI" userLabel="First Responder" sceneMemberID="firstResponder"/>

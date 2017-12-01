@@ -37,7 +37,7 @@
                         <barButtonItem key="rightBarButtonItem" title="+ Acara" id="Ag2-Pb-Fxu">
                             <connections>
                                 <action selector="tambah_acara_button:" destination="C9I-iE-ZFR" id="hW3-pz-h52"/>
-                                <segue destination="mbS-np-kpz" kind="showDetail" id="Rjf-U0-4NG"/>
+                                <segue destination="mbS-np-kpz" kind="show" id="ZbU-dq-ScC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
