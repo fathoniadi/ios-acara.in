@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class LoginController: UIViewController {
 
@@ -43,7 +45,39 @@ class LoginController: UIViewController {
         
         if(grant_login)
         {
-            self.performSegue(withIdentifier: "to_home_sogue", sender: self)
+            let parameters: [String:Any] = [
+                "email" : email_tf,
+                "password" : password_tf
+            ];
+            
+            let urlString = Config.url()+"api/v1/auth/login1"
+            //guard let url = URL(string: urlString) else { return }
+            
+            Alamofire.request(urlString, method: .post, parameters: parameters, encoding: URLEncoding.default)
+                .validate()
+                .responseJSON { response in
+                print("Request: \(String(describing: response.request))")   // original url request
+                print("Response: \(String(describing: response.response))") // http url response
+                print("Result: \(response.result)")                         // response serialization result
+                    
+                guard response.result.isSuccess else {
+                    print("Error while fetching remote rooms: \(response.result.error)")
+                    let alert = UIAlertController(title: "Alert", message: "Cannot connect to the server", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                    return self.present(alert, animated: true, completion: nil)
+                }
+                
+                if let json = response.result.value {
+                    let res = JSON(json)
+                    print("JSON: \(res["status"])") // serialized json response
+                }
+                
+                if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                    print("Data: \(utf8Text)") // original server data as UTF8 string
+                }
+            }
+            
+            //self.performSegue(withIdentifier: "to_home_sogue", sender: self)
         }
         else{
             let alert = UIAlertController(title: "Alert", message: message_err, preferredStyle: UIAlertControllerStyle.alert)

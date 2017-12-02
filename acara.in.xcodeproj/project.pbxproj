@@ -17,6 +17,7 @@
 		306916FE1FCDCA1500C4E72D /* AddAcaraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306916FD1FCDCA1500C4E72D /* AddAcaraController.swift */; };
 		308AC9151FD1816000C86AFC /* AddAcara.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 308AC9141FD1816000C86AFC /* AddAcara.storyboard */; };
 		308AC91D1FD1B17700C86AFC /* DetailAcaraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308AC91C1FD1B17700C86AFC /* DetailAcaraController.swift */; };
+		309F11001FD2AAA4003A03F3 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F10FF1FD2AAA4003A03F3 /* Config.swift */; };
 		30EBDB041FCB2E26003DCE85 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBDB031FCB2E26003DCE85 /* LoginController.swift */; };
 		30EBDB071FCB339E003DCE85 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30EBDB061FCB339E003DCE85 /* Dashboard.storyboard */; };
 		30EBDB091FCB38AF003DCE85 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBDB081FCB38AF003DCE85 /* HomeController.swift */; };
@@ -62,6 +63,7 @@
 		306916FD1FCDCA1500C4E72D /* AddAcaraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAcaraController.swift; sourceTree = "<group>"; };
 		308AC9141FD1816000C86AFC /* AddAcara.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddAcara.storyboard; sourceTree = "<group>"; };
 		308AC91C1FD1B17700C86AFC /* DetailAcaraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAcaraController.swift; sourceTree = "<group>"; };
+		309F10FF1FD2AAA4003A03F3 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		30EBDB031FCB2E26003DCE85 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		30EBDB061FCB339E003DCE85 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		30EBDB081FCB38AF003DCE85 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		305E95D11FCAA8B800A17231 /* acara.in */ = {
 			isa = PBXGroup;
 			children = (
+				309F10FE1FD2AA6F003A03F3 /* Config */,
 				306916FC1FCD473100C4E72D /* Acara */,
 				30EBDB051FCB3375003DCE85 /* Dashboard */,
 				30A753B21FCB27C0007733A9 /* Login */,
@@ -177,6 +180,14 @@
 				308AC91C1FD1B17700C86AFC /* DetailAcaraController.swift */,
 			);
 			path = Acara;
+			sourceTree = "<group>";
+		};
+		309F10FE1FD2AA6F003A03F3 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				309F10FF1FD2AAA4003A03F3 /* Config.swift */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		30A753B21FCB27C0007733A9 /* Login */ = {
@@ -377,11 +388,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-acara.in/Pods-acara.in-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/JSONWebToken/JWT.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWT.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -514,6 +529,7 @@
 				30EBDB091FCB38AF003DCE85 /* HomeController.swift in Sources */,
 				308AC91D1FD1B17700C86AFC /* DetailAcaraController.swift in Sources */,
 				305E95D51FCAA8B800A17231 /* ViewController.swift in Sources */,
+				309F11001FD2AAA4003A03F3 /* Config.swift in Sources */,
 				30EBDB041FCB2E26003DCE85 /* LoginController.swift in Sources */,
 				305E95D31FCAA8B800A17231 /* AppDelegate.swift in Sources */,
 			);

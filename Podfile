@@ -10,6 +10,8 @@ target 'acara.in' do
   pod 'JSONWebToken'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'SwiftyJSON'
+  pod 'Alamofire'
   target 'acara.inTests' do
     inherit! :search_paths
     # Pods for testing
