@@ -12,16 +12,25 @@ import GooglePlaces
 class AddAcaraController: UIViewController, CLLocationManagerDelegate, GMSAutocompleteViewControllerDelegate, GMSMapViewDelegate {
     var locationManager = CLLocationManager()
     var mapView = GMSMapView()
-    
     var marker = GMSMarker()
+    let session = UserDefaults.standard
 
-    //@IBOutlet var viewer2: GMSMapView!
     @IBOutlet fileprivate var viewer2: GMSMapView!
     
     
-   // @IBOutlet weak var add_acara_nav: UINavigationItem!
-
-
+    @IBAction func selanjutnya_button(_ sender: UIBarButtonItem) {
+   
+        var location = [String:Float]()
+        
+        location["latitude"] = Float(marker.position.latitude)
+        location["longitude"] = Float(marker.position.longitude)
+        
+        let dict = NSKeyedArchiver.archivedData(withRootObject: location)
+        
+        session.set(dict, forKey: "lokasi_acara")
+        self.performSegue(withIdentifier: "detailacara_segue", sender: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
