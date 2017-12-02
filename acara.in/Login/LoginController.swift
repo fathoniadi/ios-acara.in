@@ -50,7 +50,7 @@ class LoginController: UIViewController {
                 "password" : password_tf
             ];
             
-            let urlString = Config.url()+"api/v1/auth/login1"
+            let urlString = Config.url()+"api/v1/auth/login"
             //guard let url = URL(string: urlString) else { return }
             
             Alamofire.request(urlString, method: .post, parameters: parameters, encoding: URLEncoding.default)
@@ -69,6 +69,15 @@ class LoginController: UIViewController {
                 
                 if let json = response.result.value {
                     let res = JSON(json)
+                    print(res)
+                    
+//                    if(res["status"] != 200)
+//                    {
+//                        //let message = res["message"]
+//                        let alert = UIAlertController(title: "Alert", message: String(describing: res["message"]), preferredStyle: UIAlertControllerStyle.alert)
+//                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+//                        return self.present(alert, animated: true, completion: nil)
+//                    }
                     print("JSON: \(res["status"])") // serialized json response
                 }
                 
