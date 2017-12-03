@@ -33,10 +33,12 @@ class DetailAcaraController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let location = self.getSessionDictByKey(withKey: "lokasi_acara")
-        
-        latitude_label.text = String(describing: location!["latitude"])
-        longitude_label.text = String(describing: location!["longitude"])
+        let location = self.getSessionDictByKey(withKey: "lokasi_acara")!
+        let longitude = location["longitude"]
+        let latitude = location["latitude"]
+        print(location)
+        latitude_label.text = latitude?.description
+        longitude_label.text = longitude?.description
         
         // Do any additional setup after loading the view.
     }
