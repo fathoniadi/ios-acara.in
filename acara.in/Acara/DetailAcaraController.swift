@@ -10,15 +10,16 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class DetailAcaraController: UIViewController {
-    
+class DetailAcaraController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet var namaacara_textfield: UITextField!
     @IBOutlet var tanggal_textfield: UITextField!
     @IBOutlet var kategori_textfield: UITextField!
     @IBOutlet var deskripsi_textview: UITextView!
     let datePicker = UIDatePicker()
-    let toolbar = UIToolbar()
+    let toolbar_datepicker = UIToolbar()
+    let toolbar_kategoripicker = UIToolbar()
+    let kategoriPicker = UIPickerView()
     
     let session = UserDefaults.standard
     var categories: Array<Any> = []
@@ -40,10 +41,14 @@ class DetailAcaraController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        createToolbarDatePicker()
         createDatePicker()
-        let location = self.getSessionDictByKey(withKey: "lokasi_acara")!
-        let longitude = location["longitude"]
-        let latitude = location["latitude"]
+        createKategoriPicker()
+        
+        //let location = self.getSessionDictByKey(withKey: "lokasi_acara")!
+        //let longitude = location["longitude"]
+        //let latitude = location["latitude"]
         let urlString = Config.url()+"api/v1/category"
         Alamofire.request(urlString, method: .get, encoding: URLEncoding.default)
             .validate()
@@ -60,7 +65,7 @@ class DetailAcaraController: UIViewController {
                 if let json = response.result.value as? [String:Any] {
                     if(json["status"] as! Int == 200)
                     {
-                        print(json["categories"])
+                        //print(json["categories"])
                         let categories_db = json["categories"] as! [Any]
                         print(categories_db)
                         for category in (0..<categories_db.count)
@@ -70,38 +75,61 @@ class DetailAcaraController: UIViewController {
                                 self.categories.append(data["name"]!)
                             }
                         }
+                        
                     }
                     
                     print(self.categories)
+                    self.kategoriPicker.reloadAllComponents()
                 }
                 
                 if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
                     print("Data: \(utf8Text)") // original server data as UTF8 string
                 }
         }
-
-        
-        //latitude_label.text = latitude?.description
-        //longitude_label.text = longitude?.description
-        
-        // Do any additional setup after loading the view.
     }
     
+    func createToolbarDatePicker()
+    {
+        toolbar_datepicker.sizeToFit()
+        let done_datepicker = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneDatePickerClick))
+        toolbar_datepicker.setItems([done_datepicker], animated: false)
+        
+        toolbar_kategoripicker.sizeToFit()
+        let done_kategoripicker = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneKategoriPickerClick))
+        toolbar_kategoripicker.setItems([done_kategoripicker], animated: false)
+    }
     
     func createDatePicker()
     {
-        toolbar.sizeToFit()
-        let done_button = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneDatePickerClick))
-        toolbar.setItems([done_button], animated: false)
-        
-        tanggal_textfield.inputAccessoryView = toolbar
+        tanggal_textfield.inputAccessoryView = toolbar_datepicker
         tanggal_textfield.inputView = datePicker
-        
         datePicker.datePickerMode = .date
-        
     }
     
+    func createKategoriPicker()
+    {
+        kategoriPicker.delegate = self
+        kategoriPicker.dataSource = self
+
+        kategori_textfield.inputAccessoryView = toolbar_kategoripicker
+        kategori_textfield.inputView = kategoriPicker
+    }
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return categories.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return categories[row] as? String
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.kategori_textfield.text = categories[row] as? String
+    }
     
     
     @objc func doneDatePickerClick()
@@ -112,8 +140,13 @@ class DetailAcaraController: UIViewController {
         
         let date_selected = formater.string(from: datePicker.date)
         
-        tanggal_textfield.text = date_selected as! String
+        tanggal_textfield.text = date_selected
         self.view.endEditing(true)
+    }
+    
+    @objc func doneKategoriPickerClick()
+    {
+       kategori_textfield.resignFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
