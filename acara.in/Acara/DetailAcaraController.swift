@@ -18,7 +18,7 @@ class DetailAcaraController: UIViewController {
     @IBOutlet var kategori_textfield: UITextField!
     @IBOutlet var deskripsi_textview: UITextView!
     let datePicker = UIDatePicker()
-    
+    let toolbar = UIToolbar()
     
     let session = UserDefaults.standard
     var categories: Array<Any> = []
@@ -86,6 +86,7 @@ class DetailAcaraController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
     
     func createDatePicker()
     {
