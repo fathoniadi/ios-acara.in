@@ -17,6 +17,8 @@ class LoginController: UIViewController {
     @IBOutlet weak var email_textfield: UITextField!
     @IBOutlet weak var password_textfield: UITextField!
     
+    let session = UserDefaults.standard
+    
     @IBAction func masuk_button(_ sender: UIButton) {
         let email_tf = email_textfield.text!
         let password_tf = password_textfield.text!
@@ -49,43 +51,49 @@ class LoginController: UIViewController {
                 "email" : email_tf,
                 "password" : password_tf
             ];
-            
+            var flag_true = false
             let urlString = Config.url()+"api/v1/auth/login"
             //guard let url = URL(string: urlString) else { return }
             
             Alamofire.request(urlString, method: .post, parameters: parameters, encoding: URLEncoding.default)
                 .validate()
                 .responseJSON { response in
-                print("Request: \(String(describing: response.request))")   // original url request
-                print("Response: \(String(describing: response.response))") // http url response
-                print("Result: \(response.result)")                         // response serialization result
+                //print("Request: \(String(describing: response.request))")   // original url request
+                //print("Response: \(String(describing: response.response))") // http url response
+                //print("Result: \(response.result)")                         // response serialization result
                     
                 guard response.result.isSuccess else {
-                    print("Error while fetching remote rooms: \(response.result.error)")
+                    print("Error while fetching remote rooms: \(String(describing: response.result.error))")
                     let alert = UIAlertController(title: "Alert", message: "Cannot connect to the server", preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                     return self.present(alert, animated: true, completion: nil)
                 }
                 
-                if let json = response.result.value {
+                    if let json = response.result.value as? [String:Any] {
                     let res = JSON(json)
                     print(res)
+                    print(json)
                     
-//                    if(res["status"] != 200)
-//                    {
-//                        //let message = res["message"]
-//                        let alert = UIAlertController(title: "Alert", message: String(describing: res["message"]), preferredStyle: UIAlertControllerStyle.alert)
-//                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-//                        return self.present(alert, animated: true, completion: nil)
-//                    }
-                    print("JSON: \(res["status"])") // serialized json response
+                    let status = json["status"] as! Int
+                    print(status)
+                    if( Int(status) != 200)
+                    {
+                        let message = json["message"] as! String
+                        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                        return self.present(alert, animated: true, completion: nil)
+                    }
+                    //print("JSON: \(res["status"])") // serialized json response
+                   flag_true = true
+                   self.session.set(String(describing: res["token"]), forKey: "token")
+                   self.performSegue(withIdentifier: "to_home_sogue", sender: self)
                 }
                 
                 if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
                     print("Data: \(utf8Text)") // original server data as UTF8 string
                 }
             }
-            
+
             //self.performSegue(withIdentifier: "to_home_sogue", sender: self)
         }
         else{
