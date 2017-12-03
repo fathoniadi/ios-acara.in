@@ -24,6 +24,74 @@ class DetailAcaraController: UIViewController, UIPickerViewDelegate, UIPickerVie
     let session = UserDefaults.standard
     var categories: Array<Any> = []
     
+    
+    @IBAction func simpan_button(_ sender: UIBarButtonItem) {
+        let nama_acara = namaacara_textfield.text!
+        let tanggal_acara = tanggal_textfield.text!
+        let kategori_acara = kategori_textfield.text!
+        let deskripsi_acara = deskripsi_textview.text!
+        let token = self.session.string(forKey: "token")!
+        let location = self.getSessionDictByKey(withKey: "lokasi_acara")!
+        let longitude = location["longitude"]
+        let latitude = location["latitude"]
+        
+        let parameters:[String:String] = [
+            "name": nama_acara,
+            "description": deskripsi_acara,
+            "date": tanggal_acara,
+            "category": kategori_acara,
+            "token": token,
+            "longitude": (longitude?.description)!,
+            "latitude": (latitude?.description)!,
+        ]
+        
+        let urlString = Config.url()+"api/v1/acara"
+        Alamofire.request(urlString, method: .post, parameters: parameters, encoding: URLEncoding.default)
+            .validate()
+            .responseJSON { response in
+                print("Request: \(String(describing: response.request))")   // original url request
+                print("Response: \(String(describing: response.response))") // http url response
+                print("Result: \(response.result)")                         // response serialization result
+                
+                guard response.result.isSuccess else {
+                    print("Error while fetching remote rooms: \(String(describing: response.result.error))")
+                    let alert = UIAlertController(title: "Gagal Menyimpan Data", message: "Cannot connect to the server", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                    return self.present(alert, animated: true, completion: nil)
+                }
+                
+                if let json = response.result.value as? [String:Any] {
+                    let status = json["status"] as! Int
+                    print(status)
+                    if( Int(status) == 200)
+                    {
+                        let alert = UIAlertController(title: "Berhasil", message: "Berhasil Menyimpan Data Acara Baru", preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler:  { (action: UIAlertAction!) in
+                            self.performSegue(withIdentifier: "to_init_segue", sender: nil)
+                        }))
+
+                        return self.present(alert, animated: true, completion: nil)
+                    }
+                    else
+                    {
+                        let message = json["message"] as! String
+                        let alert = UIAlertController(title: "Gagal", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                        return self.present(alert, animated: true, completion: nil)
+                    }
+                    
+                    
+                    
+                }
+                
+                if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                    print("Data: \(utf8Text)") // original server data as UTF8 string
+                }
+        }
+        
+        
+    }
+    
     func getSessionDictByKey(withKey key:String) -> [String:Float]?
     {
         guard let data = session.object(forKey: key) else {
@@ -46,6 +114,8 @@ class DetailAcaraController: UIViewController, UIPickerViewDelegate, UIPickerVie
         createDatePicker()
         createKategoriPicker()
         
+        deskripsi_textview.layer.borderWidth = 1.0
+        deskripsi_textview.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
         //let location = self.getSessionDictByKey(withKey: "lokasi_acara")!
         //let longitude = location["longitude"]
         //let latitude = location["latitude"]
@@ -137,6 +207,7 @@ class DetailAcaraController: UIViewController, UIPickerViewDelegate, UIPickerVie
         let formater = DateFormatter()
         formater.dateStyle = .medium
         formater.timeStyle = .none
+        formater.dateFormat = "MM/dd/YYYY"
         
         let date_selected = formater.string(from: datePicker.date)
         

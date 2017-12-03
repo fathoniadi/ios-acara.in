@@ -57,8 +57,8 @@ class AddAcaraController: UIViewController, CLLocationManagerDelegate, GMSAutoco
         let camera = GMSCameraPosition.camera(withLatitude: userLocation!.coordinate.latitude,
                                               longitude: userLocation!.coordinate.longitude, zoom: 13.0)
         
-        marker.position = CLLocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude)
-        marker.map = viewer2
+//        marker.position = CLLocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude)
+//        marker.map = viewer2
         
         viewer2.camera = camera
         viewer2.animate(to: camera)
@@ -93,7 +93,7 @@ class AddAcaraController: UIViewController, CLLocationManagerDelegate, GMSAutoco
     }
     
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        let camera = GMSCameraPosition.camera(withLatitude: place.coordinate.latitude, longitude: place.coordinate.longitude, zoom: 15.0)
+        let camera = GMSCameraPosition.camera(withLatitude: place.coordinate.latitude, longitude: place.coordinate.longitude, zoom: 13.0)
         
         viewer2.camera = camera
         self.dismiss(animated: true, completion: nil) // dismiss after select place

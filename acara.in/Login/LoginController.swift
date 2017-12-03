@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class LoginController: UIViewController {
+class LoginController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var login_navbar: UIView!
     
@@ -107,8 +107,23 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        email_textfield.delegate = self
+        password_textfield.delegate = self
 
         // Do any additional setup after loading the view.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if(textField == email_textfield){
+            email_textfield.resignFirstResponder()
+        }
+        
+        if(textField == password_textfield){
+            password_textfield.resignFirstResponder()
+        }
+        
+        return true
     }
 
     override func didReceiveMemoryWarning() {

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -39,7 +40,11 @@
                         <viewLayoutGuide key="safeArea" id="Giy-Iw-Xru"/>
                     </view>
                     <navigationItem key="navigationItem" title="Lokasi" id="1XI-YI-FFu">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0oe-uy-P40"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0oe-uy-P40">
+                            <connections>
+                                <segue destination="2Ep-Jb-NcZ" kind="show" identifier="to_init_segue" id="Vn9-FT-Yxc"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="xXn-CU-xQm">
                             <connections>
                                 <action selector="searchButton:" destination="fwq-vC-Bpv" id="vRd-yQ-OF1"/>
@@ -48,14 +53,22 @@
                     </navigationItem>
                     <connections>
                         <outlet property="viewer2" destination="UEM-Cj-nro" id="Qfz-tV-5Ja"/>
-                        <segue destination="5ny-qA-Wlv" kind="show" identifier="detailacara_segue" id="4Ai-cZ-ziC"/>
+                        <segue destination="ltq-Hj-5bn" kind="show" identifier="detailacara_segue" id="DFa-6c-gGW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aq2-PV-eTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="384.80000000000001" y="51.724137931034484"/>
         </scene>
-        <!--Detail Acara Controller-->
+        <!--Dashboard-->
+        <scene sceneID="oHU-qj-s1I">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="to_init_storyboard" storyboardName="Dashboard" id="2Ep-Jb-NcZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Iy-4r-l5u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1672" y="-404"/>
+        </scene>
+        <!--Detail Acara-->
         <scene sceneID="yTi-Ef-TCn">
             <objects>
                 <viewController storyboardIdentifier="detailacara_story" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5ny-qA-Wlv" customClass="DetailAcaraController" customModule="acara_in" customModuleProvider="target" sceneMemberID="viewController">
@@ -78,10 +91,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ouS-zD-cCw">
-                                <rect key="frame" x="16" y="360" width="343" height="128"/>
+                                <rect key="frame" x="16" y="360" width="343" height="215"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Deskripsi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTV-oE-iCM">
@@ -102,7 +115,7 @@
                                 <rect key="frame" x="16" y="192" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Hj-3p-478">
@@ -123,16 +136,33 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="uMG-YJ-UWg"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Detail Acara" id="FLp-hG-BD8">
+                        <leftBarButtonItems>
+                            <barButtonItem id="xlr-n0-3f0"/>
+                            <barButtonItem title="Back" id="HEl-IY-lti">
+                                <connections>
+                                    <segue destination="2XO-75-e5i" kind="unwind" identifier="returntolokasi_segue" unwindAction="returnedWithSegue:" id="99l-YL-QPv"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Simpan" id="ICM-si-a3u">
+                            <connections>
+                                <action selector="simpan_button:" destination="5ny-qA-Wlv" id="nnt-MU-RIq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="deskripsi_textview" destination="ouS-zD-cCw" id="Zft-ec-s2j"/>
                         <outlet property="kategori_textfield" destination="8Hj-3p-478" id="eei-QN-yTr"/>
                         <outlet property="namaacara_textfield" destination="ojn-zN-UNL" id="7qy-SL-8WG"/>
                         <outlet property="tanggal_textfield" destination="cek-mf-cSL" id="WMi-dQ-T4d"/>
+                        <segue destination="2Ep-Jb-NcZ" kind="show" identifier="to_init_segue" id="Mi4-2D-rhP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sth-ka-nSN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="2XO-75-e5i" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1493.5999999999999" y="40.929535232383813"/>
+            <point key="canvasLocation" x="2334" y="214"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4hh-OD-ipe">
@@ -152,5 +182,26 @@
             </objects>
             <point key="canvasLocation" x="-463" y="98"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EcN-GR-XD6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ltq-Hj-5bn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bDL-TV-6jh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5ny-qA-Wlv" kind="relationship" relationship="rootViewController" id="CzB-f6-Ifu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hy5-C7-gID" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1220" y="361"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Vn9-FT-Yxc"/>
+    </inferredMetricsTieBreakers>
 </document>
