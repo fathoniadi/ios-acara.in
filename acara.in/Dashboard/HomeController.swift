@@ -10,13 +10,16 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 
-class HomeController: UIViewController, CLLocationManagerDelegate {
+class HomeController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
 
     @IBAction func tambah_acara_button(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: "add_acara_sogue", sender: self)
     }
     var locationManager = CLLocationManager()
     lazy var mapView = GMSMapView()
+    
+    @IBOutlet var viewer2: GMSMapView!
+    
     
     @IBAction func menu_button(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: "menu_sogue", sender: self)
@@ -25,12 +28,11 @@ class HomeController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         
         let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 13.0)
-        self.mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        viewer2.camera = camera
         
-        view = self.mapView
-        
-        self.mapView.isMyLocationEnabled = true
-        self.mapView.settings.myLocationButton = true
+        viewer2.isMyLocationEnabled = true
+        viewer2.settings.myLocationButton = true
+        viewer2.delegate = self
         
         self.locationManager.delegate = self
         self.locationManager.requestWhenInUseAuthorization()
@@ -45,7 +47,12 @@ class HomeController: UIViewController, CLLocationManagerDelegate {
         let userLocation = locations.last
         let camera = GMSCameraPosition.camera(withLatitude: userLocation!.coordinate.latitude,
                                               longitude: userLocation!.coordinate.longitude, zoom: 13.0)
-        self.mapView.animate(to: camera)
+        
+        //        marker.position = CLLocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude)
+        //        marker.map = viewer2
+        
+        viewer2.camera = camera
+        viewer2.animate(to: camera)
         self.locationManager.stopUpdatingLocation()
     }
 
