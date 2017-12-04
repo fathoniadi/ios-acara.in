@@ -20,10 +20,10 @@ class AddAcaraController: UIViewController, CLLocationManagerDelegate, GMSAutoco
     
     @IBAction func selanjutnya_button(_ sender: UIBarButtonItem) {
    
-        var location = [String:Float]()
+        var location = [String:String]()
         
-        location["latitude"] = Float(marker.position.latitude)
-        location["longitude"] = Float(marker.position.longitude)
+        location["latitude"] = marker.position.latitude.description
+        location["longitude"] = marker.position.longitude.description
         
         let dict = NSKeyedArchiver.archivedData(withRootObject: location)
         

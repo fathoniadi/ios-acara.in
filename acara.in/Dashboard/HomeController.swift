@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
+import Alamofire
 
 class HomeController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
 
@@ -16,7 +17,8 @@ class HomeController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
         self.performSegue(withIdentifier: "add_acara_sogue", sender: self)
     }
     var locationManager = CLLocationManager()
-    lazy var mapView = GMSMapView()
+    
+    var markers = [Any]()
     
     @IBOutlet var viewer2: GMSMapView!
     
@@ -38,9 +40,73 @@ class HomeController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.startUpdatingLocation()
+        loadMarker()
         
 
         // Do any additional setup after loading the view.
+    }
+    
+    func delAllMarker()
+    {
+        for data in (0..<markers.count)
+        {
+            let marker = markers[data]
+            if var value = marker as? [String:Any]
+            {
+                value["marker"] = nil
+            }
+            //markers.remove(at: data)
+        }
+        markers.removeAll()
+    }
+    
+    func loadMarker()
+    {
+        delAllMarker()
+        let urlString = Config.url()+"api/v1/acara"
+        Alamofire.request(urlString, method: .get, encoding: URLEncoding.default)
+            .validate()
+            .responseJSON { response in
+                //                print("Request: \(String(describing: response.request))")   // original url request
+                //                print("Response: \(String(describing: response.response))") // http url response
+                //                print("Result: \(response.result)")                         // response serialization result
+                //
+                guard response.result.isSuccess else {
+                    print("Error while fetching remote rooms: \(String(describing: response.result.error))")
+                    return
+                }
+                
+                if let json = response.result.value as? [String:Any] {
+                    if(json["status"] as! Int == 200)
+                    {
+                        let acaras_db = json["acaras"] as! [Any]
+                        print(acaras_db)
+                        for acara in (0..<acaras_db.count)
+                        {
+                            if let data = acaras_db[acara] as? [String:Any]
+                            {
+                                let marker_acara = GMSMarker();
+                                let latitude = Double(data["latitude"] as! String)!
+                                let longitude = Double(data["longitude"] as! String)!
+                                
+                                print(data)
+                                
+                                marker_acara.position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+                                marker_acara.map = self.viewer2
+                                self.markers.append(["data": data, "marker": marker_acara])
+                            }
+                        }
+                        
+                    }
+                    
+                    //print(self.categories)
+                    
+                }
+                
+                if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                    print("Data: \(utf8Text)") // original server data as UTF8 string
+                }
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -50,9 +116,9 @@ class HomeController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
         
         //        marker.position = CLLocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude)
         //        marker.map = viewer2
-        
         viewer2.camera = camera
         viewer2.animate(to: camera)
+        loadMarker()
         self.locationManager.stopUpdatingLocation()
     }
 

@@ -45,6 +45,8 @@ class DetailAcaraController: UIViewController, UIPickerViewDelegate, UIPickerVie
             "latitude": (latitude?.description)!,
         ]
         
+        print(parameters)
+        
         let urlString = Config.url()+"api/v1/acara"
         Alamofire.request(urlString, method: .post, parameters: parameters, encoding: URLEncoding.default)
             .validate()
@@ -92,7 +94,7 @@ class DetailAcaraController: UIViewController, UIPickerViewDelegate, UIPickerVie
         
     }
     
-    func getSessionDictByKey(withKey key:String) -> [String:Float]?
+    func getSessionDictByKey(withKey key:String) -> [String:String]?
     {
         guard let data = session.object(forKey: key) else {
             return nil
@@ -104,7 +106,7 @@ class DetailAcaraController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
         
         let unarchivedObject = NSKeyedUnarchiver.unarchiveObject(with: retrievedData)
-        return unarchivedObject as? [String:Float]
+        return unarchivedObject as? [String:String]
     }
     
     override func viewDidLoad() {
