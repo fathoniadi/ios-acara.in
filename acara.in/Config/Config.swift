@@ -12,6 +12,6 @@ public class Config: NSObject {
     
     public static func url() -> String
     {
-        return "http://10.151.254.199:7000/"
+        return "http://10.151.36.132:7000/"
     }
 }

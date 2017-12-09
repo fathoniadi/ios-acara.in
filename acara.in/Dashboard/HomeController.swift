@@ -120,6 +120,35 @@ class HomeController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
     }
     
     
+    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+        var flag = false
+        for marker_db in markers{
+            if let data = marker_db as? [String:Any]
+            {
+                if(data["marker"] as! GMSMarker == marker)
+                {
+                    flag = true
+                    
+                    if let acara = data["data"] as? [String:Any]
+                    {
+                        let alert = UIAlertController(title: "Alert", message: acara["name"] as? String, preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                    break
+                }
+            }
+        }
+        
+        if(!flag)
+        {
+            let alert = UIAlertController(title: "Alert", message: "Data tidak ditemukan", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    
 
     @IBAction func returned(segue: UIStoryboardSegue) {
        
