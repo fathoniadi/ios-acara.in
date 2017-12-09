@@ -100,14 +100,14 @@ class HomeController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
                 }
                 
                 if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                    print("Data: \(utf8Text)") // original server data as UTF8 string
+                   // print("Data: \(utf8Text)") // original server data as UTF8 string
                 }
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let userLocation = locations.last
-        print(locations)
+        //print(locations)
         let camera = GMSCameraPosition.camera(withLatitude: userLocation!.coordinate.latitude,
                                               longitude: userLocation!.coordinate.longitude, zoom: 16.0)
         viewer2.camera = camera

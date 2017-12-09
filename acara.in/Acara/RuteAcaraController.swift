@@ -106,20 +106,19 @@ class RuteAcaraController: UIViewController, GMSMapViewDelegate, CLLocationManag
         let origin = lat_orig!+","+long_orig!
         let destination = dest_lat!+","+dest_long!
         
-        let url = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&mode=driving"
+        let url = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&mode=driving&language=ID-id"
         
         Alamofire.request(url).responseJSON { response in
             
             print(response.request as Any)  // original URL request
-            print(response.response as Any) // HTTP URL response
-            print(response.data as Any)     // server data
-            print(response.result as Any)   // result of response serialization
+            //print(response.response as Any) // HTTP URL response
+            //print(response.data as Any)     // server data
+            //print(response.result as Any)   // result of response serialization
             
             let json = JSON(response.result.value!)
             print(json)
             let routes = json["routes"].arrayValue
             
-            // print route using Polyline
             for route in routes
             {
                 let routeOverviewPolyline = route["overview_polyline"].dictionary

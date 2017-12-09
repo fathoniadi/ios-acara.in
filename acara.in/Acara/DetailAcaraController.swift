@@ -45,15 +45,15 @@ class DetailAcaraController: UIViewController, UIPickerViewDelegate, UIPickerVie
             "latitude": (latitude?.description)!,
         ]
         
-        print(parameters)
+        //print(parameters)
         
         let urlString = Config.url()+"api/v1/acara"
         Alamofire.request(urlString, method: .post, parameters: parameters, encoding: URLEncoding.default)
             .validate()
             .responseJSON { response in
-                print("Request: \(String(describing: response.request))")   // original url request
-                print("Response: \(String(describing: response.response))") // http url response
-                print("Result: \(response.result)")                         // response serialization result
+                //print("Request: \(String(describing: response.request))")   // original url request
+                //print("Response: \(String(describing: response.response))") // http url response
+                //print("Result: \(response.result)")                         // response serialization result
                 
                 guard response.result.isSuccess else {
                     print("Error while fetching remote rooms: \(String(describing: response.result.error))")
@@ -64,7 +64,7 @@ class DetailAcaraController: UIViewController, UIPickerViewDelegate, UIPickerVie
                 
                 if let json = response.result.value as? [String:Any] {
                     let status = json["status"] as! Int
-                    print(status)
+                    //print(status)
                     if( Int(status) == 200)
                     {
                         let alert = UIAlertController(title: "Berhasil", message: "Berhasil Menyimpan Data Acara Baru", preferredStyle: UIAlertControllerStyle.alert)
@@ -87,7 +87,7 @@ class DetailAcaraController: UIViewController, UIPickerViewDelegate, UIPickerVie
                 }
                 
                 if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                    print("Data: \(utf8Text)") // original server data as UTF8 string
+                    //print("Data: \(utf8Text)") // original server data as UTF8 string
                 }
         }
         

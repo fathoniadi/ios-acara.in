@@ -56,7 +56,7 @@ class ShowAcaraController: UIViewController {
                 }
                 
                 if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                    print("Data: \(utf8Text)") // original server data as UTF8 string
+                    //print("Data: \(utf8Text)") // original server data as UTF8 string
                 }
         }
         // Do any additional setup after loading the view.

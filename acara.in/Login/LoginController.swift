@@ -76,7 +76,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
                     let res = JSON(json)
                     
                     let status = json["status"] as! Int
-                    print(status)
+                    //print(status)
                     if( Int(status) != 200)
                     {
                         let message = json["message"] as! String
