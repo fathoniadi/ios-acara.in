@@ -89,6 +89,7 @@ class HomeController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
                                 let longitude = Double(data["longitude"] as! String)!
                                 
                                 marker_acara.title = data["name"] as? String
+                                marker_acara.snippet = "Klik untuk lihat detail"
                                 marker_acara.position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
                                 marker_acara.map = self.viewer2
                                 self.markers.append(["data": data, "marker": marker_acara])
