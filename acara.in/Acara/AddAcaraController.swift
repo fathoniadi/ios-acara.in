@@ -34,7 +34,7 @@ class AddAcaraController: UIViewController, CLLocationManagerDelegate, GMSAutoco
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 13.0)
+        let camera = GMSCameraPosition.camera(withLatitude: -7.2821281, longitude: 112.7929391, zoom: 20.0)
         viewer2.camera = camera
         
         viewer2.isMyLocationEnabled = true
@@ -55,7 +55,7 @@ class AddAcaraController: UIViewController, CLLocationManagerDelegate, GMSAutoco
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let userLocation = locations.last
         let camera = GMSCameraPosition.camera(withLatitude: userLocation!.coordinate.latitude,
-                                              longitude: userLocation!.coordinate.longitude, zoom: 13.0)
+                                              longitude: userLocation!.coordinate.longitude, zoom: 16.0)
         
 //        marker.position = CLLocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude)
 //        marker.map = viewer2
@@ -93,7 +93,7 @@ class AddAcaraController: UIViewController, CLLocationManagerDelegate, GMSAutoco
     }
     
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        let camera = GMSCameraPosition.camera(withLatitude: place.coordinate.latitude, longitude: place.coordinate.longitude, zoom: 13.0)
+        let camera = GMSCameraPosition.camera(withLatitude: place.coordinate.latitude, longitude: place.coordinate.longitude, zoom: 16.0)
         
         viewer2.camera = camera
         self.dismiss(animated: true, completion: nil) // dismiss after select place

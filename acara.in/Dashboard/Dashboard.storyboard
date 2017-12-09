@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WCm-Ib-Lua">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WCm-Ib-Lua">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -51,11 +51,20 @@
                     <connections>
                         <outlet property="viewer2" destination="0Ah-6v-GWu" id="Cp3-eP-G30"/>
                         <segue destination="bwI-mb-s9O" kind="show" identifier="menu_sogue" id="0x5-8h-o2N"/>
+                        <segue destination="U9s-ha-XJc" kind="show" identifier="show_acara_segue" id="fR5-eR-rcR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YfH-s6-JQV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="426.39999999999998" y="72.413793103448285"/>
+        </scene>
+        <!--show_acara-->
+        <scene sceneID="4Jc-aJ-wM0">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="to_show_acara" storyboardName="ShowAcara" referencedIdentifier="show_acara" id="U9s-ha-XJc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d5U-hA-n3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="350" y="629"/>
         </scene>
         <!--Menu Controller-->
         <scene sceneID="Mzq-pe-2d2">

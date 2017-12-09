@@ -10,6 +10,7 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 import Alamofire
+import CoreLocation
 
 class HomeController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
 
@@ -17,8 +18,9 @@ class HomeController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
         self.performSegue(withIdentifier: "add_acara_sogue", sender: self)
     }
     var locationManager = CLLocationManager()
-    
+    let session = UserDefaults.standard
     var markers = [Any]()
+    var last_position = [String:String]()
     
     @IBOutlet var viewer2: GMSMapView!
     
@@ -29,7 +31,7 @@ class HomeController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 13.0)
+        let camera = GMSCameraPosition.camera(withLatitude: -7.2821281, longitude: 112.7929391, zoom: 16.0)
         viewer2.camera = camera
         
         viewer2.isMyLocationEnabled = true
@@ -40,9 +42,7 @@ class HomeController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.startUpdatingLocation()
-        loadMarker()
-        
-
+        //loadMarker()
         // Do any additional setup after loading the view.
     }
     
@@ -61,7 +61,7 @@ class HomeController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
     
     func loadMarker()
     {
-        delAllMarker()
+        self.delAllMarker()
         let urlString = Config.url()+"api/v1/acara"
         Alamofire.request(urlString, method: .get, encoding: URLEncoding.default)
             .validate()
@@ -78,8 +78,8 @@ class HomeController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
                 if let json = response.result.value as? [String:Any] {
                     if(json["status"] as! Int == 200)
                     {
+                        
                         let acaras_db = json["acaras"] as! [Any]
-                        print(acaras_db)
                         for acara in (0..<acaras_db.count)
                         {
                             if let data = acaras_db[acara] as? [String:Any]
@@ -107,11 +107,20 @@ class HomeController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let userLocation = locations.last
+        print(locations)
         let camera = GMSCameraPosition.camera(withLatitude: userLocation!.coordinate.latitude,
-                                              longitude: userLocation!.coordinate.longitude, zoom: 13.0)
+                                              longitude: userLocation!.coordinate.longitude, zoom: 16.0)
         viewer2.camera = camera
         viewer2.animate(to: camera)
-        loadMarker()
+        
+        if(last_position["longitude"] != userLocation!.coordinate.latitude.description || last_position["latitude"] != userLocation!.coordinate.latitude.description)
+        {
+            last_position["longitude"] = userLocation!.coordinate.latitude.description
+            last_position["latitude"] = userLocation!.coordinate.latitude.description
+            
+            loadMarker()
+        }
+        
         self.locationManager.stopUpdatingLocation()
     }
 
@@ -129,12 +138,10 @@ class HomeController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
                 if(data["marker"] as! GMSMarker == marker)
                 {
                     flag = true
-                    
                     if let acara = data["data"] as? [String:Any]
                     {
-                        let alert = UIAlertController(title: "Alert", message: acara["name"] as? String, preferredStyle: UIAlertControllerStyle.alert)
-                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-                        self.present(alert, animated: true, completion: nil)
+                        self.session.set(acara["id"], forKey: "acara_id")
+                        self.performSegue(withIdentifier: "show_acara_segue", sender: nil)
                     }
                     break
                 }
