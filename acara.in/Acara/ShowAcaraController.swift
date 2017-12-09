@@ -34,10 +34,6 @@ class ShowAcaraController: UIViewController {
                     if(json["status"] as! Int == 200)
                     {
                         
-                        let dict = NSKeyedArchiver.archivedData(withRootObject: json["data"] as Any)
-                        
-                        self.session.set(dict, forKey: "detail_acara")
-                        
                         if let data = json["data"] as? [String:Any]
                         {
                             let name = data["acara"]

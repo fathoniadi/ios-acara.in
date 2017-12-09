@@ -115,7 +115,7 @@ class HomeController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
         
         if(last_position["longitude"] != userLocation!.coordinate.latitude.description || last_position["latitude"] != userLocation!.coordinate.latitude.description)
         {
-            last_position["longitude"] = userLocation!.coordinate.latitude.description
+            last_position["longitude"] = userLocation!.coordinate.longitude.description
             last_position["latitude"] = userLocation!.coordinate.latitude.description
             
             loadMarker()
