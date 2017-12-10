@@ -24,6 +24,9 @@ class RuteAcaraController: UIViewController, GMSMapViewDelegate, CLLocationManag
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        last_position["longitude"] = "-7.2821281".description
+        last_position["latitude"] = "112.7929391".description
+        
         let camera = GMSCameraPosition.camera(withLatitude: -7.2821281, longitude: 112.7929391, zoom: 16.0)
         viewer2.camera = camera
         
@@ -87,13 +90,12 @@ class RuteAcaraController: UIViewController, GMSMapViewDelegate, CLLocationManag
         for polyline in polylines{
             polyline.map = nil
         }
-        
         polylines.removeAll()
     }
     
     func drawPath()
     {
-        if(acara.isEmpty)
+        if(acara.isEmpty || last_position.isEmpty)
         {
             return
         }
@@ -130,7 +132,6 @@ class RuteAcaraController: UIViewController, GMSMapViewDelegate, CLLocationManag
                 polyline.map = self.viewer2
                 self.polylines.append(polyline)
             }
-            
         }
     }
     

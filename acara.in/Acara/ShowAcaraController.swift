@@ -13,6 +13,12 @@ class ShowAcaraController: UIViewController {
 
     let session = UserDefaults.standard
     
+    @IBOutlet var name_label: UILabel!
+    @IBOutlet var kategori_label: UILabel!
+    @IBOutlet var tanggal_label: UILabel!
+    @IBOutlet var owner_label: UILabel!
+    @IBOutlet var deskripsi_textview: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let acara_id = session.string(forKey: "acara_id")!;
@@ -36,11 +42,33 @@ class ShowAcaraController: UIViewController {
                         
                         if let data = json["data"] as? [String:Any]
                         {
-                            let name = data["acara"]
-                            let description = data["description"]
-                            let date = data["tanggal"]
+                            var name = ""
+                            var description = ""
+                            var date = ""
                             var category_name = ""
                             var owner_name = ""
+                            
+                            if let value = data["name"] as? String
+                            {
+                                name = value
+                            }
+                            
+                            if let value = data["tanggal"] as? String
+                            {
+                                var formater = DateFormatter()
+                                formater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+                                let date_format = formater.date(from: value)!
+
+                                formater = DateFormatter()
+                                formater.dateStyle = .medium
+                                formater.timeStyle = .none
+                                date = formater.string(from: date_format)
+                            }
+                            
+                            if let value = data["description"] as? String
+                            {
+                                description = value
+                            }
                             
                             if let category = data["category"] as? [String:Any]
                             {
@@ -51,6 +79,13 @@ class ShowAcaraController: UIViewController {
                             {
                                 owner_name = user["name"] as! String
                             }
+                            
+                            self.name_label.text = name
+                            self.kategori_label.text = category_name
+                            self.owner_label.text = owner_name
+                            self.tanggal_label.text = date
+                            self.deskripsi_textview.text = description
+                            
                         }
                     }
                 }
