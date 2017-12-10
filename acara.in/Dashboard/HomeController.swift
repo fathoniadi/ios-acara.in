@@ -113,7 +113,7 @@ class HomeController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
         viewer2.camera = camera
         viewer2.animate(to: camera)
         
-        if(last_position["longitude"] != userLocation!.coordinate.latitude.description || last_position["latitude"] != userLocation!.coordinate.latitude.description)
+        if(last_position["longitude"] != userLocation!.coordinate.longitude.description || last_position["latitude"] != userLocation!.coordinate.latitude.description)
         {
             last_position["longitude"] = userLocation!.coordinate.longitude.description
             last_position["latitude"] = userLocation!.coordinate.latitude.description

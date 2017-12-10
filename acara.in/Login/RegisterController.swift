@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class RegisterController: UIViewController {
+class RegisterController: UIViewController, UITextFieldDelegate {
     @IBOutlet var name_textfield: UITextField!
     @IBOutlet var email_textfield: UITextField!
     @IBOutlet var password_textfield: UITextField!
@@ -80,12 +80,36 @@ class RegisterController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        email_textfield.delegate = self
+        password_textfield.delegate = self
+        cpassword_textfield.delegate = self
+        name_textfield.delegate = self
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if(textField == email_textfield){
+            email_textfield.resignFirstResponder()
+        }
+        
+        if(textField == password_textfield){
+            password_textfield.resignFirstResponder()
+        }
+        
+        if(textField == cpassword_textfield){
+            cpassword_textfield.resignFirstResponder()
+        }
+        
+        if(textField == name_textfield){
+            name_textfield.resignFirstResponder()
+        }
+        
+        return true
     }
     
 

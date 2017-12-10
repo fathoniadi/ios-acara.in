@@ -16,8 +16,8 @@ class RuteAcaraController: UIViewController, GMSMapViewDelegate, CLLocationManag
 
     let session = UserDefaults.standard
     var locationManager = CLLocationManager()
-    var acara = [String:Any]()
     var last_position = [String:String]()
+    var acara_position = [String:String]()
     var polylines = [GMSPolyline]()
     
     @IBOutlet var viewer2: GMSMapView!
@@ -61,15 +61,18 @@ class RuteAcaraController: UIViewController, GMSMapViewDelegate, CLLocationManag
                         
                         if let data = json["data"] as? [String:Any]
                         {
-                            self.acara = data
                             let marker_acara = GMSMarker();
+                            
+                            self.acara_position["latitude"] = data["latitude"] as? String
+                            self.acara_position["longitude"] = data["longitude"] as? String
+                            
                             let latitude = Double(data["latitude"] as! String)!
                             let longitude = Double(data["longitude"] as! String)!
                             
                             marker_acara.title = data["name"] as? String
-                            marker_acara.snippet = "Klik untuk lihat detail"
                             marker_acara.position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
                             marker_acara.map = self.viewer2
+                            self.viewer2.selectedMarker = marker_acara
                             self.drawPath()
                         }
                     }
@@ -87,7 +90,8 @@ class RuteAcaraController: UIViewController, GMSMapViewDelegate, CLLocationManag
     
     func removeDirection()
     {
-        for polyline in polylines{
+        for polyline in polylines
+        {
             polyline.map = nil
         }
         polylines.removeAll()
@@ -95,7 +99,7 @@ class RuteAcaraController: UIViewController, GMSMapViewDelegate, CLLocationManag
     
     func drawPath()
     {
-        if(acara.isEmpty || last_position.isEmpty)
+        if(acara_position.isEmpty || last_position.isEmpty)
         {
             return
         }
@@ -103,8 +107,8 @@ class RuteAcaraController: UIViewController, GMSMapViewDelegate, CLLocationManag
         removeDirection()
         let lat_orig = last_position["latitude"] as String!
         let long_orig = last_position["longitude"] as String!
-        let dest_lat = acara["latitude"] as! String!
-        let dest_long = acara["longitude"] as! String!
+        let dest_lat = acara_position["latitude"] as String!
+        let dest_long = acara_position["longitude"] as String!
         let origin = lat_orig!+","+long_orig!
         let destination = dest_lat!+","+dest_long!
         
@@ -142,14 +146,11 @@ class RuteAcaraController: UIViewController, GMSMapViewDelegate, CLLocationManag
         viewer2.camera = camera
         viewer2.animate(to: camera)
         
-        if(last_position["longitude"] != userLocation!.coordinate.latitude.description || last_position["latitude"] != userLocation!.coordinate.latitude.description)
-        {
-            last_position["longitude"] = userLocation!.coordinate.longitude.description
-            last_position["latitude"] = userLocation!.coordinate.latitude.description
+
+        last_position["longitude"] = userLocation!.coordinate.longitude.description
+        last_position["latitude"] = userLocation!.coordinate.latitude.description
             
-            drawPath()
-        }
-        
+        drawPath()
         self.locationManager.stopUpdatingLocation()
     }
     

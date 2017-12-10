@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3005387E1FDD82B100E9773F /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3005387D1FDD82B000E9773F /* RegisterController.swift */; };
+		300538801FDDB8EE00E9773F /* PencarianController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3005387F1FDDB8EE00E9773F /* PencarianController.swift */; };
 		305E95D31FCAA8B800A17231 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305E95D21FCAA8B800A17231 /* AppDelegate.swift */; };
 		305E95D51FCAA8B800A17231 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305E95D41FCAA8B800A17231 /* ViewController.swift */; };
 		305E95D81FCAA8B900A17231 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305E95D61FCAA8B900A17231 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		26511CBB7A60E8C084FFAD73 /* Pods_acara_inUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_acara_inUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C205AA44704E1D4E37C7C27 /* Pods-acara.inUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-acara.inUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-acara.inUITests/Pods-acara.inUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3005387D1FDD82B000E9773F /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		3005387F1FDDB8EE00E9773F /* PencarianController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencarianController.swift; sourceTree = "<group>"; };
 		305E95CF1FCAA8B800A17231 /* acara.in.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = acara.in.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		305E95D21FCAA8B800A17231 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		305E95D41FCAA8B800A17231 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				30EBDB061FCB339E003DCE85 /* Dashboard.storyboard */,
 				30EBDB081FCB38AF003DCE85 /* HomeController.swift */,
 				30EBDB0A1FCB3D5F003DCE85 /* MenuController.swift */,
+				3005387F1FDDB8EE00E9773F /* PencarianController.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				3005387E1FDD82B100E9773F /* RegisterController.swift in Sources */,
 				30EBDB091FCB38AF003DCE85 /* HomeController.swift in Sources */,
 				308AC91D1FD1B17700C86AFC /* DetailAcaraController.swift in Sources */,
+				300538801FDDB8EE00E9773F /* PencarianController.swift in Sources */,
 				305E95D51FCAA8B800A17231 /* ViewController.swift in Sources */,
 				30971FC01FDC50C800A1FE49 /* ShowAcaraController.swift in Sources */,
 				30971FC21FDC693C00A1FE49 /* RuteAcaraController.swift in Sources */,
