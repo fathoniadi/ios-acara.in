@@ -55,8 +55,6 @@ class LoginController: UIViewController, UITextFieldDelegate {
             ];
             
             let urlString = Config.url()+"api/v1/auth/login"
-          
-            
             
             Alamofire.request(urlString, method: .post, parameters: parameters, encoding: URLEncoding.default)
                 .validate()

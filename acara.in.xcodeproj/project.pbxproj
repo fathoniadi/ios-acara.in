@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3005387E1FDD82B100E9773F /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3005387D1FDD82B000E9773F /* RegisterController.swift */; };
 		305E95D31FCAA8B800A17231 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305E95D21FCAA8B800A17231 /* AppDelegate.swift */; };
 		305E95D51FCAA8B800A17231 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305E95D41FCAA8B800A17231 /* ViewController.swift */; };
 		305E95D81FCAA8B900A17231 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305E95D61FCAA8B900A17231 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		26511CBB7A60E8C084FFAD73 /* Pods_acara_inUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_acara_inUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C205AA44704E1D4E37C7C27 /* Pods-acara.inUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-acara.inUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-acara.inUITests/Pods-acara.inUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3005387D1FDD82B000E9773F /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		305E95CF1FCAA8B800A17231 /* acara.in.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = acara.in.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		305E95D21FCAA8B800A17231 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		305E95D41FCAA8B800A17231 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				30EBDB031FCB2E26003DCE85 /* LoginController.swift */,
+				3005387D1FDD82B000E9773F /* RegisterController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 			files = (
 				306916FE1FCDCA1500C4E72D /* AddAcaraController.swift in Sources */,
 				30EBDB0B1FCB3D5F003DCE85 /* MenuController.swift in Sources */,
+				3005387E1FDD82B100E9773F /* RegisterController.swift in Sources */,
 				30EBDB091FCB38AF003DCE85 /* HomeController.swift in Sources */,
 				308AC91D1FD1B17700C86AFC /* DetailAcaraController.swift in Sources */,
 				305E95D51FCAA8B800A17231 /* ViewController.swift in Sources */,

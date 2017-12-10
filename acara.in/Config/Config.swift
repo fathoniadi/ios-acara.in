@@ -12,6 +12,6 @@ public class Config: NSObject {
     
     public static func url() -> String
     {
-        return "https://acarain.fathoniadi.my.id/"
+        return "http://10.151.36.132:7000/"
     }
 }
