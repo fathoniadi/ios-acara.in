@@ -188,6 +188,7 @@ class HomeController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
     override func viewWillAppear(_ animated: Bool) {
         if(!last_position.isEmpty)
         {
+            viewer2.clear()
             loadMarker()
         }
     }
