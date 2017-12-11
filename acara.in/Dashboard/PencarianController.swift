@@ -17,6 +17,7 @@ class PencarianController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet var datestart_textfield: UITextField!
     @IBOutlet var dateend_textfield: UITextField!
     
+    let session = UserDefaults.standard
     
     let datestart_datepicker = UIDatePicker()
     let dateend_datepicker = UIDatePicker()
@@ -27,6 +28,26 @@ class PencarianController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     let kategori_toolbar = UIToolbar()
     
     var categories: Array<Any> = []
+    @IBAction func cari_button(_ sender: UIBarButtonItem) {
+        let kategori = kategori_textfield.text!
+        let keyword = keyword_textfield.text!
+        let jarak = jarakmaks_textfield.text!
+        let date_start = datestart_textfield.text!
+        let date_end = dateend_textfield.text!
+        
+        let parameters = [
+            "kategori" : kategori,
+            "keyword": keyword,
+            "jarak": jarak,
+            "date_start": date_start,
+            "date_end": date_end
+        ]
+        
+        let dict = NSKeyedArchiver.archivedData(withRootObject: parameters)
+        
+        session.set(dict, forKey: "pencarian")
+        self.performSegue(withIdentifier: "to_init_segue", sender: nil)
+    }
     
     @IBOutlet var jarakmaks_textfield: UITextField!
     override func viewDidLoad() {

@@ -59,11 +59,63 @@ class HomeController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
         markers.removeAll()
     }
     
+    func getSessionDictByKey(withKey key:String) -> [String:Any]?
+    {
+        guard let data = session.object(forKey: key) else {
+            return [String:Any]()
+        }
+        
+        // Check if retrieved data has correct type
+        guard let retrievedData = data as? Data else {
+            return [String:Any]()
+        }
+        
+        let unarchivedObject = NSKeyedUnarchiver.unarchiveObject(with: retrievedData)
+        session.set(nil, forKey: key)
+        return unarchivedObject as? [String:String]
+    }
+    
     func loadMarker()
     {
         self.delAllMarker()
-        let urlString = Config.url()+"api/v1/acara"
-        Alamofire.request(urlString, method: .get, encoding: URLEncoding.default)
+        let flag = session.object(forKey: "pencarian")
+        var data = [String:String]()
+        if(flag != nil)
+        {
+            data = self.getSessionDictByKey(withKey: "pencarian")! as! [String : String]
+        }
+        else{
+            
+        }
+        
+        var parameters = [
+            "keyword": "",
+            "category": "",
+            "date_start": "",
+            "date_end": "",
+            "distance": ""
+        ]
+        
+//        let parameters = [
+//            "kategori" : kategori,
+//            "keyword": keyword,
+//            "jarak": jarak,
+//            "date_start": date_start,
+//            "date_end": date_end
+//        ]
+        
+        
+        if let parameter = data as? [String:String]
+        {
+            parameters["keyword"] = parameter["keyword"]
+            parameters["category"] = parameter["kategori"]
+            parameters["date_start"] = parameter["date_start"]
+            parameters["date_end"] = parameter["date_end"]
+            parameters["distance"] = parameter["jarak"]
+        }
+        
+        let urlString = Config.url()+"api/v1/acara/"+last_position["latitude"]!+"/"+last_position["longitude"]!
+        Alamofire.request(urlString, method: .get, parameters: parameters, encoding: URLEncoding.default)
             .validate()
             .responseJSON { response in
                 //                print("Request: \(String(describing: response.request))")   // original url request
@@ -97,6 +149,10 @@ class HomeController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
                         }
                         
                     }
+                    else
+                    {
+                        self.delAllMarker()
+                    }
                 }
                 
                 if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
@@ -127,6 +183,13 @@ class HomeController: UIViewController, CLLocationManagerDelegate, GMSMapViewDel
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if(!last_position.isEmpty)
+        {
+            loadMarker()
+        }
     }
     
     

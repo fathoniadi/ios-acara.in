@@ -259,16 +259,29 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ywn-Z5-LFO"/>
                     </view>
-                    <navigationItem key="navigationItem" id="drJ-5W-0wb"/>
+                    <navigationItem key="navigationItem" title="Pencarian" id="drJ-5W-0wb">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="boo-su-NSO">
+                            <connections>
+                                <segue destination="HBS-n5-gGn" kind="unwind" identifier="to_init_segue" unwindAction="returnedWithSegue:" id="kTp-VE-tkS"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Cari" id="Xje-3O-f8H">
+                            <connections>
+                                <action selector="cari_button:" destination="bo5-KX-flQ" id="5kE-dV-y8b"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="dateend_textfield" destination="7iT-nU-uGG" id="nKJ-EB-mde"/>
                         <outlet property="datestart_textfield" destination="JF8-Uy-PhV" id="LwT-YK-WLN"/>
                         <outlet property="jarakmaks_textfield" destination="AQF-Ry-31A" id="XaW-IW-KM8"/>
                         <outlet property="kategori_textfield" destination="QDM-Kh-dqY" id="WN2-tX-2mY"/>
                         <outlet property="keyword_textfield" destination="0Ej-4p-rFK" id="i7C-4W-HOl"/>
+                        <segue destination="HBS-n5-gGn" kind="unwind" unwindAction="returnedWithSegue:" id="8y0-8P-Vf2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t9t-NQ-SN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="HBS-n5-gGn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="172" y="814.54272863568224"/>
         </scene>
